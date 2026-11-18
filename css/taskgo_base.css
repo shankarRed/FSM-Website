@@ -2409,8 +2409,17 @@ p {
 }
 
 .nav-link.w--current {
-  color: var(--_color---dark);
+  color: #673ab7;
   font-weight: var(--_weight---weight--semi-bold);
+}
+
+.nav-link.w--current .nav-text,
+.nav-link.w--current .nav-text._01,
+.nav-link.w--current .nav-text._02,
+.nav-link.w--current:hover .nav-text,
+.nav-link.w--current:hover .nav-text._01,
+.nav-link.w--current:hover .nav-text._02 {
+  color: #673ab7;
 }
 
 .navbar-menu {
@@ -4329,6 +4338,15 @@ p {
   text-align: center;
   text-transform: none;
   overflow: hidden;
+}
+
+.hero-title {
+  font-weight: 400;
+}
+
+.hero-title strong,
+.hero-title b {
+  font-weight: 700;
 }
 
 .dashbord-tabs {

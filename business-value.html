@@ -65,6 +65,23 @@
       -webkit-font-smoothing: antialiased;
     }
 
+    /* Active navigation link text color */
+    .navbar-inner-menu .nav-link.w--current,
+    .navbar-inner-menu .nav-link.w--current:hover,
+    .navbar-inner-menu .nav-link.w--current .nav-text,
+    .navbar-inner-menu .nav-link.w--current:hover .nav-text,
+    .navbar-inner-menu .nav-link.w--current .nav-text._01,
+    .navbar-inner-menu .nav-link.w--current .nav-text._02,
+    .navbar-inner-menu .nav-link[aria-current="page"],
+    .navbar-inner-menu .nav-link[aria-current="page"]:hover,
+    .navbar-inner-menu .nav-link[aria-current="page"] .nav-text,
+    .navbar-inner-menu .nav-link[aria-current="page"]:hover .nav-text,
+    .navbar-inner-menu .nav-link[aria-current="page"] .nav-text._01,
+    .navbar-inner-menu .nav-link[aria-current="page"] .nav-text._02 {
+      color: #673ab7 !important;
+      font-weight: 600 !important;
+    }
+
     /* Remove Webflow Badge */
     .w-webflow-badge,
     a[href*="webflow.com?utm_campaign=brandjs"] {

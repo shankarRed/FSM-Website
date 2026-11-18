@@ -500,6 +500,14 @@ button {
   color: var(--color-primary-dark);
 }
 
+.nav-link.w--current,
+.nav-link.w--current .nav-text,
+.nav-link[aria-current="page"],
+.nav-link[aria-current="page"] .nav-text {
+  color: #673ab7 !important;
+  font-weight: 600;
+}
+
 .nav-link::after {
   content: '';
   position: absolute;
