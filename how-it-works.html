@@ -73,6 +73,28 @@
       font-family: var(--_font-family---inter-tight, "Inter Tight", sans-serif);
     }
 
+    /* Sticky Navigation Header without drop-down entrance animation */
+    .navbar {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      z-index: 9999 !important;
+      background: rgba(255, 255, 255, 0.94) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
+      box-shadow: 0 4px 20px rgba(13, 6, 45, 0.04) !important;
+      padding-top: 14px !important;
+      padding-bottom: 14px !important;
+      transform: none !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      animation: none !important;
+      transition: none !important;
+    }
+
     /* Active navigation link text color */
     .navbar-inner-menu .nav-link.w--current,
     .navbar-inner-menu .nav-link.w--current:hover,
@@ -300,7 +322,7 @@
 <body>
   <div class="page-wraper">
     <div data-animation="default" class="navbar w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav"
-      data-easing="ease" data-collapse="medium" data-w-id="379f0b2a-9a01-099d-ecd8-fd7be9a6e7a5" role="banner"
+      data-easing="ease" data-collapse="medium" role="banner"
       data-duration="400">
       <div class="w-layout-blockcontainer container-big w-container">
         <div class="navbar-wrapper"><a href="index.html" class="navbar-logo-link w-nav-brand"

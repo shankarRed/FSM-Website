@@ -77,6 +77,28 @@
       font-family: var(--_font-family---inter-tight, "Inter Tight", sans-serif);
     }
 
+    /* Sticky Navigation Header without drop-down entrance animation */
+    .navbar {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      z-index: 9999 !important;
+      background: rgba(255, 255, 255, 0.94) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
+      box-shadow: 0 4px 20px rgba(13, 6, 45, 0.04) !important;
+      padding-top: 14px !important;
+      padding-bottom: 14px !important;
+      transform: none !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      animation: none !important;
+      transition: none !important;
+    }
+
     /* Active navigation link text color */
     .navbar-inner-menu .nav-link.w--current,
     .navbar-inner-menu .nav-link.w--current:hover,
@@ -340,7 +362,7 @@
 <body>
   <div class="page-wraper">
     <div data-animation="default" class="navbar w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav"
-      data-easing="ease" data-collapse="medium" data-w-id="379f0b2a-9a01-099d-ecd8-fd7be9a6e7a5" role="banner"
+      data-easing="ease" data-collapse="medium" role="banner"
       data-duration="400">
       <div class="w-layout-blockcontainer container-big w-container">
         <div class="navbar-wrapper"><a href="index.html" class="navbar-logo-link w-nav-brand"
@@ -548,10 +570,10 @@
 
     <!-- 7 Core Solution Capabilities Infographic Section (Exact Match to Reference UI) -->
     <section class="section" id="core-capabilities"
-      style="padding-top: 0px; padding-bottom: 90px; background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFD 50%, #FFFFFF 100%); position: relative; overflow: hidden;">
+      style="padding-top: 0px; padding-bottom: 60px; background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFD 50%, #FFFFFF 100%); position: relative; overflow: hidden;">
       <div class="w-layout-blockcontainer container-big w-container" style="max-width: 1320px;">
 
-        <div class="heading-wraper" style="text-align: center; margin-bottom: 45px;" style="padding-bottom: 0;">
+        <div class="heading-wraper" style="text-align: center; margin-bottom: 30px;" style="padding-bottom: 0;">
           <h2 class="heading-title center"
             style="font-size: 34px; font-weight: 600; color: #0D062D; margin-bottom: 14px; letter-spacing: -0.02em;">
             Core Solution Capabilities
@@ -566,8 +588,8 @@
 
         <!-- Infographic Scroll Container for Mobile / Responsive Swiping -->
         <div class="capabilities-infographic-scroll"
-          style="width: 100%; overflow-x: auto; padding: 10px 5px 35px; scrollbar-width: thin; -webkit-overflow-scrolling: touch;">
-          <div style="min-width: 1200px; max-width: 1260px; margin: 0 auto;">
+          style="width: 100%; overflow-x: auto; padding: 5px 5px 25px; scrollbar-width: thin; -webkit-overflow-scrolling: touch;">
+          <div style="max-width: 1020px; margin: 0 auto;">
             <svg width="100%" height="auto" viewBox="0 0 1260 490" xmlns="http://www.w3.org/2000/svg"
               style="display: block; overflow: visible;">
               <defs>
@@ -668,7 +690,7 @@
                   operational configurations.</title>
 
                 <!-- Top Centered Icon on Axis (x = 0) -->
-                <g transform="translate(-12, -80)" stroke="#0D062D" stroke-width="1.8" fill="none">
+                <g transform="translate(-12, -58)" stroke="#0D062D" stroke-width="1.8" fill="none">
                   <svg width="24" height="24" viewBox="0 0 24 24">
                     <path d="M3 21h18M3 7v14M21 7v14M6 11h2M6 15h2M11 11h2M11 15h2M16 11h2M16 15h2M9 3h6v4H9z" />
                   </svg>
@@ -699,7 +721,7 @@
                 </title>
 
                 <!-- Top Centered Icon on Axis (x = 0) -->
-                <g transform="translate(-12, -80)" stroke="#0D062D" stroke-width="1.8" fill="none">
+                <g transform="translate(-12, -58)" stroke="#0D062D" stroke-width="1.8" fill="none">
                   <svg width="24" height="24" viewBox="0 0 24 24">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                     <polyline points="14 2 14 8 20 8" />
@@ -733,7 +755,7 @@
                 </title>
 
                 <!-- Top Centered Icon on Axis (x = 0) -->
-                <g transform="translate(-12, -80)" stroke="#0D062D" stroke-width="1.8" fill="none">
+                <g transform="translate(-12, -58)" stroke="#0D062D" stroke-width="1.8" fill="none">
                   <svg width="24" height="24" viewBox="0 0 24 24">
                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                     <circle cx="9" cy="7" r="4" />
@@ -767,7 +789,7 @@
                   deadlines.</title>
 
                 <!-- Top Centered Icon on Axis (x = 0) -->
-                <g transform="translate(-12, -80)" stroke="#0D062D" stroke-width="1.8" fill="none">
+                <g transform="translate(-12, -58)" stroke="#0D062D" stroke-width="1.8" fill="none">
                   <svg width="24" height="24" viewBox="0 0 24 24">
                     <circle cx="12" cy="12" r="10" />
                     <polyline points="12 6 12 12 16 14" />
@@ -798,7 +820,7 @@
                   completion to provide evidence of completed work before closing a ticket.</title>
 
                 <!-- Top Centered Icon on Axis (x = 0) -->
-                <g transform="translate(-12, -80)" stroke="#0D062D" stroke-width="1.8" fill="none">
+                <g transform="translate(-12, -58)" stroke="#0D062D" stroke-width="1.8" fill="none">
                   <svg width="24" height="24" viewBox="0 0 24 24">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                     <path d="M14 2v6h6" />
@@ -830,7 +852,7 @@
                   performance summaries to support informed business decisions.</title>
 
                 <!-- Top Centered Icon on Axis (x = 0) -->
-                <g transform="translate(-12, -80)" stroke="#0D062D" stroke-width="1.8" fill="none">
+                <g transform="translate(-12, -58)" stroke="#0D062D" stroke-width="1.8" fill="none">
                   <svg width="24" height="24" viewBox="0 0 24 24">
                     <line x1="18" y1="20" x2="18" y2="10" />
                     <line x1="12" y1="20" x2="12" y2="4" />
@@ -863,7 +885,7 @@
                   update service activities.</title>
 
                 <!-- Top Centered Icon on Axis (x = 0) -->
-                <g transform="translate(-12, -80)" stroke="#0D062D" stroke-width="1.8" fill="none">
+                <g transform="translate(-12, -58)" stroke="#0D062D" stroke-width="1.8" fill="none">
                   <svg width="24" height="24" viewBox="0 0 24 24">
                     <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
                     <line x1="12" y1="18" x2="12.01" y2="18" />
