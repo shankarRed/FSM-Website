@@ -330,6 +330,37 @@
       outline: none;
     }
 
+    .ecosystem-faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .ecosystem-col,
+    .faq-col {
+      min-width: 0;
+      width: 100%;
+    }
+
+    .ecosystem-col .tools-container {
+      max-width: 480px !important;
+      margin: 16px auto 0 !important;
+    }
+
+    .faq-col .faq-list {
+      max-width: 100% !important;
+      margin: 0 !important;
+      gap: 16px !important;
+    }
+
+    @media screen and (max-width: 991px) {
+      .ecosystem-faq-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+    }
+
     .coin-wrapper._02,
     .coin-wrapper._04,
     .coin-wrapper._06,
@@ -691,7 +722,7 @@
             src="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/695c8cf08cb522a35bfca3a9_%E2%80%94Pngtree%E2%80%94white%20cloud%20hd%20transparent%20png_3595697%203.svg"
             loading="lazy" alt="" class="hero-mockup-02" /></div>
         <div class="w-layout-blockcontainer container-big w-container">
-          <div data-w-id="797e3361-487b-c8ea-1630-282c1a243e31" class="hero-title-holder" style="padding-top: 130px;">
+          <div data-w-id="797e3361-487b-c8ea-1630-282c1a243e31" class="hero-title-holder" style="padding-top: 150px;">
             <div class="hero-content-wrap">
               <h3 split-text="true" class="hero-title heading" style="font-weight: 400;font-size: 36px;">Simplify
                 <strong style="font-weight: 700; font-size: 36px;">Field Service
@@ -1154,17 +1185,20 @@
     </section>
 
 
-    <section class="section" id="integrations">
+    <section class="section" id="integrations" style="padding-top: 60px; padding-bottom: 70px;">
       <div class="w-layout-blockcontainer container-big w-container">
-        <div Section="Heading" class="heading-wraper">
-          <h3 class="heading-title" style="font-size: 36px;">Connected Ecosystem & Integrations</h3>
-          <div data-w-id="a3cc7b28-1cbf-064a-1b6b-a32dbbadf5a6" style="opacity: 1;" class="subheading-wrap round">
-            <p class="paragraph-large center" style="font-size: 15px;">Add or remove integrations as your needs grow,
-              without slowing down
-              performance.</p>
-          </div>
-        </div>
-        <div data-w-id="92dd160a-bd6b-f0c8-f83a-6914a01f46da" class="tools-container"><img
+        <div class="ecosystem-faq-grid">
+          <!-- Left Column: Connected Ecosystem & Integrations -->
+          <div class="ecosystem-col">
+            <div Section="Heading" class="heading-wraper" style="text-align: left; align-items: flex-start; margin-bottom: 20px;">
+              <h3 class="heading-title" style="font-size: 32px; text-align: left; margin: 0 0 10px 0;">Connected Ecosystem & Integrations</h3>
+              <div data-w-id="a3cc7b28-1cbf-064a-1b6b-a32dbbadf5a6" style="opacity: 1;" class="subheading-wrap round">
+                <p class="paragraph-large" style="font-size: 15px; color: #64748B; text-align: left; margin: 0;">Add or remove integrations as your needs grow,
+                  without slowing down
+                  performance.</p>
+              </div>
+            </div>
+            <div data-w-id="92dd160a-bd6b-f0c8-f83a-6914a01f46da" class="tools-container"><img
             src="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/6964d4c6e745703e7cd7ed76_Group%202087329898.svg"
             loading="lazy"
             style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
@@ -1387,13 +1421,13 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="section" style="padding-bottom: 0;">
-      <div class="w-layout-blockcontainer container-big w-container">
-        <div Section="Heading" class="heading-wraper">
-          <h3 class="heading-title" style="font-size: 36px;">Frequently Asked Questions</h3>
-          <div class="subheading-wrap faq">
-            <p class="paragraph-large center" style="font-size: 15px;">Everything you need to know before getting
+
+      <!-- Right Column: Frequently Asked Questions -->
+      <div class="faq-col">
+        <div Section="Heading" class="heading-wraper" style="text-align: left; align-items: flex-start; margin-bottom: 20px;">
+          <h3 class="heading-title" style="font-size: 32px; text-align: left; margin: 0 0 10px 0;">Frequently Asked Questions</h3>
+          <div class="subheading-wrap faq" style="text-align: left; max-width: 100%;">
+            <p class="paragraph-large" style="font-size: 15px; color: #64748B; text-align: left; margin: 0;">Everything you need to know before getting
               started. Helping teams move
               forward with confidence.</p>
           </div>
@@ -1501,8 +1535,10 @@
           </div>
         </div>
       </div>
-    </section>
-    <section id="CTA" class="section">
+      </div>
+    </div>
+  </section>
+  <section id="CTA" class="section">
       <div class="w-layout-blockcontainer container-big w-container">
         <div class="cta-content-wrap">
           <div class="cta-inner">
