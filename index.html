@@ -173,343 +173,400 @@
     .faq-accordion.active .vertical-line {
       display: none !important;
     }
-  
 
 
-@media screen and (max-width: 767px) {
-  
-}
+
+    @media screen and (max-width: 767px) {}
 
 
 
 
 
 
-.subheading-wrap.step { max-width: 780px !important; }
-.steps-corner-wrap {
-  padding-left: 78px !important;
-  position: absolute !important;
-  inset: auto 0% 0% auto !important;
-  transform: none !important;
-  left: auto !important;
-  right: 0 !important;
-  bottom: 0 !important;
-}
-.steps-corner-image {
-  object-fit: fill !important;
-  width: 100% !important;
-  height: 480px !important;
-}
-
-
-/* Hero Floating Badges */
-.bubble-icon._01 {
-  max-width: 172px !important;
-}
-.bubble-icon._02 {
-  max-width: 148px !important;
-}
-.bubble-icon._03 {
-  max-width: 204px !important;
-}
-.bubble-icon._04 {
-  max-width: 156px !important;
-}
-
-
-/* Clean Step Cards - No opening animation, no accordion images */
-.reason-block-wrap {
-  padding: 24px 28px !important;
-  border-radius: 20px !important;
-  border: 1px solid #ECECF4 !important;
-  background: #ffffff !important;
-  box-shadow: 0 4px 16px rgba(13, 6, 45, 0.04) !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
-  cursor: default !important;
-  display: flex !important;
-  flex-direction: column !important;
-  width: 100% !important;
-  height: auto !important;
-  overflow: visible !important;
-}
-.reason-block-wrap:hover {
-  border-color: #6049E7 !important;
-  box-shadow: 0 8px 24px rgba(96, 73, 231, 0.08) !important;
-  transform: translateY(-2px) !important;
-}
-.reason-block {
-  display: none !important;
-  height: 0 !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-}
-.tab-cornar-image {
-  display: none !important;
-}
-.round-wrap {
-  width: 50px !important;
-  height: 50px !important;
-  min-width: 50px !important;
-  border-radius: 50% !important;
-  background: #6049E7 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-.trams-title {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: flex-start !important;
-  gap: 20px !important;
-  width: 100% !important;
-}
-.steps-title {
-  display: flex !important;
-  flex-direction: column !important;
-  flex: 1 !important;
-}
-
-
-  /* FSM Integrations Interactive Tooltips */
-  .coin-wrapper {
-    cursor: pointer !important;
-    z-index: 10 !important;
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), z-index 0s;
-    outline: none;
-  }
-  .coin-wrapper._02, .coin-wrapper._04, .coin-wrapper._06, .coin-wrapper._07 {
-    display: flex !important;
-  }
-  .coin-wrapper:hover,
-  .coin-wrapper:focus-within,
-  .coin-wrapper.is-active {
-    z-index: 150 !important;
-  }
-  .coin-wrapper .coin-logo-wrap {
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
-  }
-  .coin-wrapper:hover .coin-logo-wrap,
-  .coin-wrapper.is-active .coin-logo-wrap {
-    transform: scale(1.12);
-    box-shadow: 0 8px 24px rgba(13, 6, 45, 0.18);
-  }
-  .fsm-integration-tooltip {
-    position: absolute;
-    width: 300px;
-    background: #FFFFFF;
-    border: 1.5px solid #E8EEF5;
-    border-radius: 18px;
-    padding: 16px 18px;
-    box-shadow: 0 20px 48px -10px rgba(13, 6, 45, 0.2), 0 6px 18px rgba(13, 6, 45, 0.08);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.24s cubic-bezier(0.16, 1, 0.3, 1), transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.24s;
-    z-index: 200;
-    text-align: left;
-    user-select: none;
-  }
-  .coin-wrapper:hover .fsm-integration-tooltip,
-  .coin-wrapper:focus-within .fsm-integration-tooltip,
-  .coin-wrapper.is-active .fsm-integration-tooltip {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-  .fsm-integration-tooltip::before {
-    content: '';
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    background: #FFFFFF;
-    border: 1.5px solid #E8EEF5;
-    transform: rotate(45deg);
-    z-index: 2;
-  }
-
-  /* Inward positioning: Left coins open right; Right coins open left */
-  .tooltip-right-top {
-    left: calc(100% + 16px);
-    top: -10px;
-    transform: translateX(-10px) scale(0.96);
-    transform-origin: left top;
-  }
-  .coin-wrapper:hover .tooltip-right-top,
-  .coin-wrapper.is-active .tooltip-right-top {
-    transform: translateX(0) scale(1);
-  }
-  .tooltip-right-top::before {
-    left: -8px;
-    top: 48px;
-    border-top: none;
-    border-right: none;
-  }
-
-  .tooltip-left-top {
-    right: calc(100% + 16px);
-    top: -10px;
-    transform: translateX(10px) scale(0.96);
-    transform-origin: right top;
-  }
-  .coin-wrapper:hover .tooltip-left-top,
-  .coin-wrapper.is-active .tooltip-left-top {
-    transform: translateX(0) scale(1);
-  }
-  .tooltip-left-top::before {
-    right: -8px;
-    top: 48px;
-    border-bottom: none;
-    border-left: none;
-  }
-
-  .tooltip-right-bottom {
-    left: calc(100% + 16px);
-    bottom: -10px;
-    transform: translateX(-10px) scale(0.96);
-    transform-origin: left bottom;
-  }
-  .coin-wrapper:hover .tooltip-right-bottom,
-  .coin-wrapper.is-active .tooltip-right-bottom {
-    transform: translateX(0) scale(1);
-  }
-  .tooltip-right-bottom::before {
-    left: -8px;
-    bottom: 48px;
-    border-top: none;
-    border-right: none;
-  }
-
-  .tooltip-left-bottom {
-    right: calc(100% + 16px);
-    bottom: -10px;
-    transform: translateX(10px) scale(0.96);
-    transform-origin: right bottom;
-  }
-  .coin-wrapper:hover .tooltip-left-bottom,
-  .coin-wrapper.is-active .tooltip-left-bottom {
-    transform: translateX(0) scale(1);
-  }
-  .tooltip-left-bottom::before {
-    right: -8px;
-    bottom: 48px;
-    border-bottom: none;
-    border-left: none;
-  }
-
-  @media screen and (max-width: 991px) {
-    .fsm-integration-tooltip {
-      width: 270px;
-      padding: 14px 15px;
+    .subheading-wrap.step {
+      max-width: 780px !important;
     }
-  }
-  @media screen and (max-width: 767px) {
-    .fsm-integration-tooltip {
-      position: fixed;
-      left: 50% !important;
-      right: auto !important;
-      top: 50% !important;
-      bottom: auto !important;
-      transform: translate(-50%, -50%) scale(0.96) !important;
-      width: calc(100vw - 40px);
-      max-width: 330px;
-      box-shadow: 0 25px 60px rgba(13, 6, 45, 0.35);
+
+    .steps-corner-wrap {
+      padding-left: 78px !important;
+      position: absolute !important;
+      inset: auto 0% 0% auto !important;
+      transform: none !important;
+      left: auto !important;
+      right: 0 !important;
+      bottom: 0 !important;
     }
+
+    .steps-corner-image {
+      object-fit: fill !important;
+      width: 100% !important;
+      height: 480px !important;
+    }
+
+
+    /* Hero Floating Badges - Static position, no drop/fall animation */
+    .bubble-wraper,
+    .bubble-icon,
+    .bubble-icon._01,
+    .bubble-icon._02,
+    .bubble-icon._03,
+    .bubble-icon._04 {
+      animation: none !important;
+      transition: none !important;
+      transform: none !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .bubble-icon._01 {
+      max-width: 172px !important;
+    }
+
+    .bubble-icon._02 {
+      max-width: 148px !important;
+    }
+
+    .bubble-icon._03 {
+      max-width: 204px !important;
+    }
+
+    .bubble-icon._04 {
+      max-width: 156px !important;
+    }
+
+
+    /* Clean Step Cards - No opening animation, no accordion images */
+    .reason-block-wrap {
+      padding: 24px 28px !important;
+      border-radius: 20px !important;
+      border: 1px solid #ECECF4 !important;
+      background: #ffffff !important;
+      box-shadow: 0 4px 16px rgba(13, 6, 45, 0.04) !important;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
+      cursor: default !important;
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+      height: auto !important;
+      overflow: visible !important;
+    }
+
+    .reason-block-wrap:hover {
+      border-color: #6049E7 !important;
+      box-shadow: 0 8px 24px rgba(96, 73, 231, 0.08) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    .reason-block {
+      display: none !important;
+      height: 0 !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+
+    .tab-cornar-image {
+      display: none !important;
+    }
+
+    .round-wrap {
+      width: 50px !important;
+      height: 50px !important;
+      min-width: 50px !important;
+      border-radius: 50% !important;
+      background: #6049E7 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    .trams-title {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: flex-start !important;
+      gap: 20px !important;
+      width: 100% !important;
+    }
+
+    .steps-title {
+      display: flex !important;
+      flex-direction: column !important;
+      flex: 1 !important;
+    }
+
+
+    /* FSM Integrations Interactive Tooltips */
+    .coin-wrapper {
+      cursor: pointer !important;
+      z-index: 10 !important;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), z-index 0s;
+      outline: none;
+    }
+
+    .coin-wrapper._02,
+    .coin-wrapper._04,
+    .coin-wrapper._06,
+    .coin-wrapper._07 {
+      display: flex !important;
+    }
+
+    .coin-wrapper:hover,
+    .coin-wrapper:focus-within,
+    .coin-wrapper.is-active {
+      z-index: 150 !important;
+    }
+
+    .coin-wrapper .coin-logo-wrap {
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+    }
+
+    .coin-wrapper:hover .coin-logo-wrap,
+    .coin-wrapper.is-active .coin-logo-wrap {
+      transform: scale(1.12);
+      box-shadow: 0 8px 24px rgba(13, 6, 45, 0.18);
+    }
+
+    .fsm-integration-tooltip {
+      position: absolute;
+      width: 300px;
+      background: #FFFFFF;
+      border: 1.5px solid #E8EEF5;
+      border-radius: 18px;
+      padding: 16px 18px;
+      box-shadow: 0 20px 48px -10px rgba(13, 6, 45, 0.2), 0 6px 18px rgba(13, 6, 45, 0.08);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.24s cubic-bezier(0.16, 1, 0.3, 1), transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.24s;
+      z-index: 200;
+      text-align: left;
+      user-select: none;
+    }
+
     .coin-wrapper:hover .fsm-integration-tooltip,
+    .coin-wrapper:focus-within .fsm-integration-tooltip,
     .coin-wrapper.is-active .fsm-integration-tooltip {
-      transform: translate(-50%, -50%) scale(1) !important;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
     }
-    .fsm-integration-tooltip::before {
-      display: none;
-    }
-  }
 
-  .fsm-card-header {
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #F1F5F9;
-  }
-  .fsm-card-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .fsm-card-icon-box {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid;
-    flex-shrink: 0;
-  }
-  .fsm-card-icon-box img {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-    display: block;
-  }
-  .fsm-card-title {
-    font-family: 'Inter Tight', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: #0D062D;
-    line-height: 1.2;
-  }
-  .fsm-card-badge {
-    display: inline-block;
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    padding: 2px 6px;
-    border-radius: 5px;
-    margin-top: 2px;
-    line-height: 1.3;
-  }
-  .fsm-card-body {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .fsm-card-section {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-  }
-  .fsm-section-label {
-    font-size: 10.5px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #64748B;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .fsm-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  .fsm-section-desc {
-    font-size: 12px;
-    line-height: 1.45;
-    color: #334155;
-    margin: 0;
-    font-weight: 500;
-  }
-  .fsm-card-section.why-fsm {
-    background: #F8F9FF;
-    border: 1px solid rgba(99, 102, 241, 0.16);
-    border-radius: 10px;
-    padding: 8px 10px;
-  }
-  .fsm-card-section.why-fsm .fsm-section-desc {
-    color: #1E293B;
-    font-weight: 500;
-  }
+    .fsm-integration-tooltip::before {
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background: #FFFFFF;
+      border: 1.5px solid #E8EEF5;
+      transform: rotate(45deg);
+      z-index: 2;
+    }
+
+    /* Inward positioning: Left coins open right; Right coins open left */
+    .tooltip-right-top {
+      left: calc(100% + 16px);
+      top: -10px;
+      transform: translateX(-10px) scale(0.96);
+      transform-origin: left top;
+    }
+
+    .coin-wrapper:hover .tooltip-right-top,
+    .coin-wrapper.is-active .tooltip-right-top {
+      transform: translateX(0) scale(1);
+    }
+
+    .tooltip-right-top::before {
+      left: -8px;
+      top: 48px;
+      border-top: none;
+      border-right: none;
+    }
+
+    .tooltip-left-top {
+      right: calc(100% + 16px);
+      top: -10px;
+      transform: translateX(10px) scale(0.96);
+      transform-origin: right top;
+    }
+
+    .coin-wrapper:hover .tooltip-left-top,
+    .coin-wrapper.is-active .tooltip-left-top {
+      transform: translateX(0) scale(1);
+    }
+
+    .tooltip-left-top::before {
+      right: -8px;
+      top: 48px;
+      border-bottom: none;
+      border-left: none;
+    }
+
+    .tooltip-right-bottom {
+      left: calc(100% + 16px);
+      bottom: -10px;
+      transform: translateX(-10px) scale(0.96);
+      transform-origin: left bottom;
+    }
+
+    .coin-wrapper:hover .tooltip-right-bottom,
+    .coin-wrapper.is-active .tooltip-right-bottom {
+      transform: translateX(0) scale(1);
+    }
+
+    .tooltip-right-bottom::before {
+      left: -8px;
+      bottom: 48px;
+      border-top: none;
+      border-right: none;
+    }
+
+    .tooltip-left-bottom {
+      right: calc(100% + 16px);
+      bottom: -10px;
+      transform: translateX(10px) scale(0.96);
+      transform-origin: right bottom;
+    }
+
+    .coin-wrapper:hover .tooltip-left-bottom,
+    .coin-wrapper.is-active .tooltip-left-bottom {
+      transform: translateX(0) scale(1);
+    }
+
+    .tooltip-left-bottom::before {
+      right: -8px;
+      bottom: 48px;
+      border-bottom: none;
+      border-left: none;
+    }
+
+    @media screen and (max-width: 991px) {
+      .fsm-integration-tooltip {
+        width: 270px;
+        padding: 14px 15px;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .fsm-integration-tooltip {
+        position: fixed;
+        left: 50% !important;
+        right: auto !important;
+        top: 50% !important;
+        bottom: auto !important;
+        transform: translate(-50%, -50%) scale(0.96) !important;
+        width: calc(100vw - 40px);
+        max-width: 330px;
+        box-shadow: 0 25px 60px rgba(13, 6, 45, 0.35);
+      }
+
+      .coin-wrapper:hover .fsm-integration-tooltip,
+      .coin-wrapper.is-active .fsm-integration-tooltip {
+        transform: translate(-50%, -50%) scale(1) !important;
+      }
+
+      .fsm-integration-tooltip::before {
+        display: none;
+      }
+    }
+
+    .fsm-card-header {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #F1F5F9;
+    }
+
+    .fsm-card-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .fsm-card-icon-box {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid;
+      flex-shrink: 0;
+    }
+
+    .fsm-card-icon-box img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .fsm-card-title {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #0D062D;
+      line-height: 1.2;
+    }
+
+    .fsm-card-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 2px 6px;
+      border-radius: 5px;
+      margin-top: 2px;
+      line-height: 1.3;
+    }
+
+    .fsm-card-body {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .fsm-card-section {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .fsm-section-label {
+      font-size: 10.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748B;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .fsm-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .fsm-section-desc {
+      font-size: 12px;
+      line-height: 1.45;
+      color: #334155;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .fsm-card-section.why-fsm {
+      background: #F8F9FF;
+      border: 1px solid rgba(99, 102, 241, 0.16);
+      border-radius: 10px;
+      padding: 8px 10px;
+    }
+
+    .fsm-card-section.why-fsm .fsm-section-desc {
+      color: #1E293B;
+      font-weight: 500;
+    }
   </style>
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
@@ -530,7 +587,8 @@
       data-easing="ease" data-collapse="medium" data-w-id="379f0b2a-9a01-099d-ecd8-fd7be9a6e7a5" role="banner"
       data-duration="400">
       <div class="w-layout-blockcontainer container-big w-container">
-        <div class="navbar-wrapper"><a href="index.html" class="navbar-logo-link w-nav-brand" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <div class="navbar-wrapper"><a href="index.html" class="navbar-logo-link w-nav-brand"
+            style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
             <img src="assets/fsm-logo-icon.png" alt="FSM Logo Icon"
               style="height: 38px; width: auto; object-fit: contain; display: block;" />
             <span
@@ -595,7 +653,7 @@
         </div>
       </div>
     </div>
-    <section class="section hero">
+    <section class="section hero" style="padding-bottom: 0;">
       <div class="home-hero-wraper">
         <div class="hero-mockup-wraper"><img
             src="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/695c8d20f9b804a3d7638e5c_%E2%80%94Pngtree%E2%80%94white%20cloud%20hd%20transparent%20png_3595697%202.webp"
@@ -607,21 +665,23 @@
         <div class="w-layout-blockcontainer container-big w-container">
           <div data-w-id="797e3361-487b-c8ea-1630-282c1a243e31" class="hero-title-holder">
             <div class="hero-content-wrap">
-              <h1 split-text="true" class="hero-title heading">Simplify Field Service Management<br>Boost Operational
-                Velocity</h1>
-              <p class="hero-subtext">Connect service requests, field dispatch, live SLA tracking, and verified
+              <h3 split-text="true" class="hero-title heading">Simplify Field Service Management<br>Boost Operational
+                Velocity</h3>
+              <p class="hero-subtext" style="font-size: 16px;">Connect service requests, field dispatch, live SLA
+                tracking, and verified
                 completion from start to finish.</p>
               <div data-w-id="533b693f-f09b-17d1-7c89-be1736f5887d" style="opacity: 1;" class="hero-button-wraper"><a
-                  data-w-id="07e84881-a001-c0a5-2295-90a5a0217a4f" href="solution.html" class="primary-button w-inline-block">
+                  data-w-id="07e84881-a001-c0a5-2295-90a5a0217a4f" style="padding: 12px;" href="solution.html"
+                  class="primary-button w-inline-block">
                   <div class="button-inner">
                     <div class="button-eliment-inner">
                       <div class="button-glow"></div>
                     </div>
                   </div>
                   <div class="button-text-wrap">
-                    <div class="button-p-text js-open-contact">Explore the Solution</div>
+                    <div class="button-p-text js-open-contact" style="font-size: 16px;">Explore the Solution</div>
                   </div>
-                </a><a data-w-id="968f79e6-facc-9494-56cc-e89b90fa3f10" href="/#CTA"
+                </a><a data-w-id="968f79e6-facc-9494-56cc-e89b90fa3f10" style="padding: 10px;" href="/#CTA"
                   class="secondary-button w-inline-block">
                   <div class="button-inner">
                     <div class="button-eliment-inner">
@@ -629,32 +689,30 @@
                     </div>
                   </div>
                   <div class="button-text-wrap">
-                    <div class="js-open-contact">Book a Demo</div>
+                    <div class="js-open-contact" style="font-size: 16px;">Book a Demo</div>
                   </div>
                 </a></div>
             </div>
-            <div id="w-node-_276c6be0-afb0-cdae-326b-340622a3de77-68ae409d" class="hero-image-wrap"><img src="assets/fsm-dashboard-hero.png" loading="lazy" style="opacity: 1; border-radius: 20px; box-shadow: 0 24px 60px rgba(13, 6, 45, 0.12), 0 4px 16px rgba(13, 6, 45, 0.06); width: 100%; height: auto; display: block; position: relative; z-index: 1;" data-w-id="7c7eea67-4213-990e-b708-c31d6b9f81b1" alt="FSM Analytics Overview Dashboard" class="hero-big-image"/>
-              <div class="bubble-wraper"><img
-                  src="assets/badge-ticket-management.svg" alt="Ticket Management"
-                  loading="lazy" style="opacity: 1;" data-w-id="777bf0bd-04f3-b1fe-ce31-11da7ddad92f" alt=""
-                  class="bubble-icon _01" /><img
-                  src="assets/badge-sla-monitoring.svg" alt="SLA Monitoring"
-                  loading="lazy"
-                  style="-webkit-transform:translate3d(0px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity: 1;"
-                  data-w-id="7d555806-dcdd-f3ca-0ddb-9a45b4ddd7e9" alt="" class="bubble-icon _02" /><img
-                  src="assets/badge-technician-management.svg" alt="Technician Management"
-                  loading="lazy"
-                  style="opacity: 1;-webkit-transform:translate3d(0px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                  data-w-id="9bb66b58-a089-4e00-c304-212f0f572386" alt="" class="bubble-icon _03" /><img
-                  src="assets/badge-service-tracking.svg" alt="Service Tracking"
-                  loading="lazy"
-                  style="opacity: 1;-webkit-transform:translate3d(0px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                  data-w-id="daf939df-93f0-ea58-61df-c2b16860cda6" alt="" class="bubble-icon _04" /></div>
+            <div id="w-node-_276c6be0-afb0-cdae-326b-340622a3de77-68ae409d" class="hero-image-wrap"><img
+                src="assets/fsm-dashboard-hero.png" loading="lazy"
+                style="opacity: 1; border-radius: 20px; box-shadow: 0 24px 60px rgba(13, 6, 45, 0.12), 0 4px 16px rgba(13, 6, 45, 0.06); width: 100%; height: auto; display: block; position: relative; z-index: 1;"
+                data-w-id="7c7eea67-4213-990e-b708-c31d6b9f81b1" alt="FSM Analytics Overview Dashboard"
+                class="hero-big-image" />
+              <div class="bubble-wraper">
+                <img src="assets/badge-ticket-management.svg" alt="Ticket Management" loading="eager"
+                  style="opacity: 1; transform: none;" class="bubble-icon _01" />
+                <img src="assets/badge-sla-monitoring.svg" alt="SLA Monitoring" loading="eager"
+                  style="opacity: 1; transform: none;" class="bubble-icon _02" />
+                <img src="assets/badge-technician-management.svg" alt="Technician Management" loading="eager"
+                  style="opacity: 1; transform: none;" class="bubble-icon _03" />
+                <img src="assets/badge-service-tracking.svg" alt="Service Tracking" loading="eager"
+                  style="opacity: 1; transform: none;" class="bubble-icon _04" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="w-layout-blockcontainer container-big overflow w-container">
+      <!-- <div class="w-layout-blockcontainer container-big overflow w-container">
         <div class="brand-wrap">
           <div class="text-cover">
             <p data-w-id="bae42104-4688-b5ea-8fe6-f23c3b8c8c64"
@@ -802,14 +860,16 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
-    <section id="Features" class="section">
+    <section id="Features" class="section" style="padding-bottom: 0;">
       <div class="w-layout-blockcontainer container-big w-container">
         <div class="heading-wraper">
-          <h2 class="heading-title center">Unlock Complete Control Over Your Field Service Operations.</h2>
+          <h3 class="heading-title center">Unlock Complete Control Over Your Field Service Operations.</h3>
           <div data-w-id="9ab92585-31d4-b89f-b10c-1f814e310de9" style="opacity: 1;" class="subheading-wrap">
-            <p class="paragraph-large center">Everything you need to manage service requests, coordinate technicians, monitor SLAs, and deliver reliable field service all in one connected platform.</p>
+            <p class="paragraph-large center" style="font-size: 16px;">Everything you need to manage service requests,
+              coordinate technicians,
+              monitor SLAs, and deliver reliable field service all in one connected platform.</p>
           </div>
         </div>
         <div data-w-id="2061b0fd-df92-52f7-a469-486e6d9e9878" class="feature-container">
@@ -861,10 +921,10 @@
           </div>
           <div class="block-card-wrap _03">
             <div class="crad-content">
-              <h4 class="card-title">File &amp; Service Verification Management</h4>
+              <h4 class="card-title">Whatsapp Management</h4>
               <div id="w-node-_620d77ce-e003-cc10-d797-4a824da76b78-68ae409d" class="sub-wrap">
-                <p class="card-subtext">Consolidate everything with task comments, file attachments, and feedback
-                  threads.</p>
+                <p class="card-subtext">Raise service requests, share feedback, and stay connected with your service
+                  team through WhatsApp.</p>
               </div>
             </div>
             <div class="right-image-wrap"><img
@@ -884,63 +944,102 @@
     <section id="Choose" class="section">
       <div class="w-layout-blockcontainer container-big w-container">
         <div class="heading-wraper">
-          <h2 class="heading-title">Why Businesses Choose FSM</h2>
+          <h3 class="heading-title">Why Businesses Choose FSM</h3>
           <div data-w-id="396c73c7-3691-1097-cda7-767c41e901f3" style="opacity: 1;" class="subheading-wrap chosse">
-            <p class="paragraph-large center">Empower service teams with connected workflows, smarter technician management, better operational visibility, and complete control over field service operations.</p>
+            <p class="paragraph-large center" style="font-size: 16px;">Empower service teams with connected workflows,
+              smarter technician
+              management, better operational visibility, and complete control over field service operations.</p>
           </div>
         </div>
         <div class="teams-wrap">
-          <div data="StepCard" data-wf-target="[[[&quot;695c7d712c7a871e68ae409d&quot;,&quot;483d0591-7d7d-36da-226f-011271e2c492&quot;],[]]]" class="teams-block">
+          <div data="StepCard"
+            data-wf-target="[[[&quot;695c7d712c7a871e68ae409d&quot;,&quot;483d0591-7d7d-36da-226f-011271e2c492&quot;],[]]]"
+            class="teams-block">
             <div class="card-top" style="width: 100%; z-index: 1;">
               <div class="card-hedaing">
                 <h3 class="heading-title" style="font-size: 32px; line-height: 1.1; margin: 0;">360&deg;</h3>
-                <img src="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/695de5f14fea034ab6110a0e_Vector.svg" loading="lazy" alt="" class="round-mage"/>
+                <img
+                  src="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/695de5f14fea034ab6110a0e_Vector.svg"
+                  loading="lazy" alt="" class="round-mage" />
               </div>
-              <h4 class="card-subtitle" style="font-size: 18px; font-weight: 700; color: #0D062D; margin: 10px 0 0 0; line-height: 1.3;">Service Visibility</h4>
+              <h4 class="card-subtitle"
+                style="font-size: 18px; font-weight: 700; color: #0D062D; margin: 10px 0 0 0; line-height: 1.3;">Service
+                Visibility</h4>
             </div>
-            <p class="paragraph-large" style="font-size: 14.5px; line-height: 1.5; color: #4E4D53; z-index: 1; margin: 0;">Manage service requests, assignments, progress, and completion from one platform.</p>
-            <img src="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696348cbff60e518c1ce42db_Mask%20group%20(3).png" loading="lazy" sizes="(max-width: 767px) 100vw, 613.9931030273438px" height="Auto" alt="" srcset="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696348cbff60e518c1ce42db_Mask%20group%20(3)-p-500.png 500w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696348cbff60e518c1ce42db_Mask%20group%20(3).png 614w" class="ctad-corner"/>
+            <p class="paragraph-large"
+              style="font-size: 14.5px; line-height: 1.5; color: #4E4D53; z-index: 1; margin: 0;">Manage service
+              requests, assignments, progress, and completion from one platform.</p>
+            <img
+              src="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696348cbff60e518c1ce42db_Mask%20group%20(3).png"
+              loading="lazy" sizes="(max-width: 767px) 100vw, 613.9931030273438px" height="Auto" alt=""
+              srcset="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696348cbff60e518c1ce42db_Mask%20group%20(3)-p-500.png 500w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696348cbff60e518c1ce42db_Mask%20group%20(3).png 614w"
+              class="ctad-corner" />
           </div>
           <div data="StepCard" class="teams-block _02">
             <div class="card-top" style="width: 100%; z-index: 1;">
               <div class="card-hedaing">
                 <h3 class="heading-title" style="font-size: 26px; line-height: 1.1; margin: 0;">Skill-Based</h3>
-                <img src="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/695de5f14fea034ab6110a0e_Vector.svg" loading="lazy" alt="" class="round-mage"/>
+                <img
+                  src="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/695de5f14fea034ab6110a0e_Vector.svg"
+                  loading="lazy" alt="" class="round-mage" />
               </div>
-              <h4 class="card-subtitle" style="font-size: 18px; font-weight: 700; color: #0D062D; margin: 10px 0 0 0; line-height: 1.3;">Smarter Assignments</h4>
+              <h4 class="card-subtitle"
+                style="font-size: 18px; font-weight: 700; color: #0D062D; margin: 10px 0 0 0; line-height: 1.3;">Smarter
+                Assignments</h4>
             </div>
-            <p class="paragraph-large" style="font-size: 14.5px; line-height: 1.5; color: #4E4D53; z-index: 1; margin: 0;">Match technician skills and availability with service requirements.</p>
+            <p class="paragraph-large"
+              style="font-size: 14.5px; line-height: 1.5; color: #4E4D53; z-index: 1; margin: 0;">Match technician
+              skills and availability with service requirements.</p>
           </div>
           <div data="StepCard" id="w-node-c5643407-c973-9380-f427-b88a540990e2-68ae409d" class="teams-block _03">
             <div class="card-top" style="width: 100%; z-index: 1;">
               <div class="card-hedaing">
                 <h3 class="heading-title" style="font-size: 26px; line-height: 1.1; margin: 0;">Real-Time</h3>
-                <img src="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/695de5f14fea034ab6110a0e_Vector.svg" loading="lazy" alt="" class="round-mage"/>
+                <img
+                  src="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/695de5f14fea034ab6110a0e_Vector.svg"
+                  loading="lazy" alt="" class="round-mage" />
               </div>
-              <h4 class="card-subtitle" style="font-size: 18px; font-weight: 700; color: #0D062D; margin: 10px 0 0 0; line-height: 1.3;">Operational Insights</h4>
+              <h4 class="card-subtitle"
+                style="font-size: 18px; font-weight: 700; color: #0D062D; margin: 10px 0 0 0; line-height: 1.3;">
+                Operational Insights</h4>
             </div>
-            <p class="paragraph-large" style="font-size: 14.5px; line-height: 1.5; color: #4E4D53; z-index: 1; margin: 0;">Monitor ticket status, service progress, and SLA performance.</p>
-            <img src="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696348cbff60e518c1ce42db_Mask%20group%20(3).png" loading="lazy" sizes="(max-width: 767px) 100vw, 613.9931030273438px" height="Auto" alt="" srcset="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696348cbff60e518c1ce42db_Mask%20group%20(3)-p-500.png 500w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696348cbff60e518c1ce42db_Mask%20group%20(3).png 614w" class="ctad-corner"/>
+            <p class="paragraph-large"
+              style="font-size: 14.5px; line-height: 1.5; color: #4E4D53; z-index: 1; margin: 0;">Monitor ticket status,
+              service progress, and SLA performance.</p>
+            <img
+              src="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696348cbff60e518c1ce42db_Mask%20group%20(3).png"
+              loading="lazy" sizes="(max-width: 767px) 100vw, 613.9931030273438px" height="Auto" alt=""
+              srcset="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696348cbff60e518c1ce42db_Mask%20group%20(3)-p-500.png 500w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696348cbff60e518c1ce42db_Mask%20group%20(3).png 614w"
+              class="ctad-corner" />
           </div>
           <div data="StepCard" id="w-node-_6b23b4fd-fa8a-f239-9d27-26a1df2138a0-68ae409d" class="teams-block _04">
             <div class="card-top" style="width: 100%; z-index: 1;">
               <div class="card-hedaing">
                 <h3 class="heading-title" style="font-size: 26px; line-height: 1.1; margin: 0;">Multi-Tenant</h3>
-                <img src="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/695de5f14fea034ab6110a0e_Vector.svg" loading="lazy" alt="" class="round-mage"/>
+                <img
+                  src="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/695de5f14fea034ab6110a0e_Vector.svg"
+                  loading="lazy" alt="" class="round-mage" />
               </div>
-              <h4 class="card-subtitle" style="font-size: 18px; font-weight: 700; color: #0D062D; margin: 10px 0 0 0; line-height: 1.3;">Scalable Operations</h4>
+              <h4 class="card-subtitle"
+                style="font-size: 18px; font-weight: 700; color: #0D062D; margin: 10px 0 0 0; line-height: 1.3;">
+                Scalable Operations</h4>
             </div>
-            <p class="paragraph-large" style="font-size: 14.5px; line-height: 1.5; color: #4E4D53; z-index: 1; margin: 0;">Support multiple service providers with organized data and role-based access.</p>
+            <p class="paragraph-large"
+              style="font-size: 14.5px; line-height: 1.5; color: #4E4D53; z-index: 1; margin: 0;">Support multiple
+              service providers with organized data and role-based access.</p>
           </div>
         </div>
       </div>
     </section>
-    <section id="Why-Choose" class="section">
+    <section id="Why-Choose" class="section" style="padding-bottom: 0;padding-top: 0;">
       <div class="w-layout-blockcontainer container-big w-container">
         <div class="heading-wraper tab">
-          <h2 class="heading-title">Get Your Field Service Operations Running Smoothly.</h2>
+          <h3 class="heading-title">Get Your Field Service Operations Running Smoothly.</h3>
           <div data-w-id="24013d1e-4477-cd8b-ce53-3c0dbfc51819" style="opacity: 1;" class="subheading-wrap step">
-            <p class="paragraph-large center">Bring your service providers, customers, technicians, and service workflows together in one connected platform. From initial setup to service completion, manage every stage with greater visibility and control.</p>
+            <p class="paragraph-large center" style="font-size: 16px;">Bring your service providers, customers,
+              technicians, and service
+              workflows together in one connected platform. From initial setup to service completion, manage every stage
+              with greater visibility and control.</p>
           </div>
         </div>
         <div class="reason-grid-wrap">
@@ -950,55 +1049,68 @@
                 loading="lazy"
                 style="-webkit-transform:translate3d(0, 0, 0) scale3d(1.5, 1.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1.5, 1.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1.5, 1.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1.5, 1.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);filter:blur(10px)"
                 data-w-id="94392e5f-5bfe-a053-fccd-82eebd4a2489" alt="" class="reason-image" />
-              <div class="steps-corner-wrap"><img class="steps-corner-image" src="assets/fsm-step-mockup.png" alt="FSM Dashboard Mockup" style="opacity: 1;" loading="lazy"/>
+              <div class="steps-corner-wrap"><img class="steps-corner-image" src="assets/fsm-step-mockup.png"
+                  alt="FSM Dashboard Mockup" style="opacity: 1;" loading="lazy" />
               </div>
             </div>
           </div>
           <div class="reason-content">
             <div class="step-cards-list" style="display: flex; flex-direction: column; gap: 16px; width: 100%;">
-              <div class="reason-block-wrap">
+              <div class="reason-block-wrap" style="    border: 1px solid #d4d4f5 !important;">
                 <div class="trams-title">
                   <div class="round-wrap">
                     <h3 class="number" style="margin: 0; font-size: 20px; font-weight: 700; color: #fff;">01</h3>
                   </div>
                   <div class="steps-title">
-                    <h4 style="margin: 0 0 6px 0; font-size: 20px; font-weight: 700; color: #0D062D;">Simple Service Setup</h4>
-                    <p class="tab-subtext" style="margin: 0; font-size: 15px; line-height: 1.5; color: #4E4D53;">Configure service providers, manage customers, register products, and organize technicians with role-based access.</p>
+                    <h4 style="margin: 0 0 6px 0; font-size: 20px; font-weight: 700; color: #0D062D;">Simple Service
+                      Setup</h4>
+                    <p class="tab-subtext" style="margin: 0; font-size: 15px; line-height: 1.5; color: #4E4D53;">
+                      Configure service providers, manage customers, register products, and organize technicians with
+                      role-based access.</p>
                   </div>
                 </div>
               </div>
 
-              <div class="reason-block-wrap">
+              <div class="reason-block-wrap" style="    border: 1px solid #d4d4f5 !important;">
                 <div class="trams-title">
                   <div class="round-wrap">
                     <h3 class="number" style="margin: 0; font-size: 20px; font-weight: 700; color: #fff;">02</h3>
                   </div>
                   <div class="steps-title">
-                    <h4 style="margin: 0 0 6px 0; font-size: 20px; font-weight: 700; color: #0D062D;">Coordinate Service Operations</h4>
-                    <p class="tab-subtext" style="margin: 0; font-size: 15px; line-height: 1.5; color: #4E4D53;">Create and manage service tickets, match technicians by skills and availability, and streamline the assignment process.</p>
+                    <h4 style="margin: 0 0 6px 0; font-size: 20px; font-weight: 700; color: #0D062D;">Coordinate Service
+                      Operations</h4>
+                    <p class="tab-subtext" style="margin: 0; font-size: 15px; line-height: 1.5; color: #4E4D53;">Create
+                      and manage service tickets, match technicians by skills and availability, and streamline the
+                      assignment process.</p>
                   </div>
                 </div>
               </div>
 
-              <div class="reason-block-wrap">
+              <div class="reason-block-wrap" style="    border: 1px solid #d4d4f5 !important;">
                 <div class="trams-title">
                   <div class="round-wrap">
                     <h3 class="number" style="margin: 0; font-size: 20px; font-weight: 700; color: #fff;">03</h3>
                   </div>
                   <div class="steps-title">
-                    <h4 style="margin: 0 0 6px 0; font-size: 20px; font-weight: 700; color: #0D062D;">Monitor Every Service</h4>
-                    <p class="tab-subtext" style="margin: 0; font-size: 15px; line-height: 1.5; color: #4E4D53;">Track ticket progress, review SLA performance, access service dashboards, and maintain visibility into service completion.</p>
+                    <h4 style="margin: 0 0 6px 0; font-size: 20px; font-weight: 700; color: #0D062D;">Monitor Every
+                      Service</h4>
+                    <p class="tab-subtext" style="margin: 0; font-size: 15px; line-height: 1.5; color: #4E4D53;">Track
+                      ticket progress, review SLA performance, access service dashboards, and maintain visibility into
+                      service completion.</p>
                   </div>
                 </div>
               </div>
-              <div class="reason-block-wrap">
+              <div class="reason-block-wrap" style="    border: 1px solid #d4d4f5 !important;">
                 <div class="trams-title">
                   <div class="round-wrap">
                     <h3 class="number" style="margin: 0; font-size: 20px; font-weight: 700; color: #fff;">04</h3>
                   </div>
                   <div class="steps-title">
-                    <h4 style="margin: 0 0 6px 0; font-size: 20px; font-weight: 700; color: #0D062D;">Verify & Complete Service</h4>
-                    <p class="tab-subtext" style="margin: 0; font-size: 15px; line-height: 1.5; color: #4E4D53;">Capture digital proof of work, obtain customer sign-offs, verify SLA compliance, and ensure complete service satisfaction.</p>
+                    <h4 style="margin: 0 0 6px 0; font-size: 20px; font-weight: 700; color: #0D062D;">Verify & Complete
+                      Service</h4>
+                    <p class="tab-subtext" style="margin: 0; font-size: 15px; line-height: 1.5; color: #4E4D53;">Capture
+                      digital proof of work, obtain customer sign-offs, verify SLA compliance, and ensure complete
+                      service satisfaction.</p>
                   </div>
                 </div>
               </div>
@@ -1007,14 +1119,15 @@
         </div>
       </div>
     </section>
-    
-    
+
+
     <section class="section" id="integrations">
       <div class="w-layout-blockcontainer container-big w-container">
         <div Section="Heading" class="heading-wraper">
-          <h2 class="heading-title">Connected Ecosystem & Integrations</h2>
+          <h3 class="heading-title">Connected Ecosystem & Integrations</h3>
           <div data-w-id="a3cc7b28-1cbf-064a-1b6b-a32dbbadf5a6" style="opacity: 1;" class="subheading-wrap round">
-            <p class="paragraph-large center">Add or remove integrations as your needs grow, without slowing down
+            <p class="paragraph-large center" style="font-size: 16px;">Add or remove integrations as your needs grow,
+              without slowing down
               performance.</p>
           </div>
         </div>
@@ -1023,23 +1136,26 @@
             loading="lazy"
             style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
             alt="" class="round-shape-image" />
-                                        <div class="coin-container">
+          <div class="coin-container">
             <!-- 1. ElevenLabs (Top-Left) -->
-            <div data-w-id="15c8d48f-e56c-273a-1149-8176f5f06026" class="coin-wrapper _02" style="position: absolute; top: 4%; left: 14%; bottom: auto; right: auto;" tabindex="0" aria-label="ElevenLabs Integration">
-              <div class="coin-logo-wrap"><img
-                  src="assets/icon-elevenlabs.svg"
-                  loading="lazy" alt="ElevenLabs" class="coin-image" /></div>
+            <div data-w-id="15c8d48f-e56c-273a-1149-8176f5f06026" class="coin-wrapper _02"
+              style="position: absolute; top: 4%; left: 14%; bottom: auto; right: auto;" tabindex="0"
+              aria-label="ElevenLabs Integration">
+              <div class="coin-logo-wrap"><img src="assets/icon-elevenlabs.svg" loading="lazy" alt="ElevenLabs"
+                  class="coin-image" /></div>
               <div class="coin-glow _02" style="background-color: #6366F1;"></div>
 
               <div class="fsm-integration-tooltip tooltip-right-top">
                 <div class="fsm-card-header">
                   <div class="fsm-card-brand">
-                    <div class="fsm-card-icon-box" style="background: rgba(99, 102, 241, 0.12); border-color: rgba(99, 102, 241, 0.25);">
+                    <div class="fsm-card-icon-box"
+                      style="background: rgba(99, 102, 241, 0.12); border-color: rgba(99, 102, 241, 0.25);">
                       <img src="assets/icon-elevenlabs.svg" alt="ElevenLabs">
                     </div>
                     <div>
                       <div class="fsm-card-title">ElevenLabs</div>
-                      <span class="fsm-card-badge" style="background: rgba(99, 102, 241, 0.1); color: #4F46E5;">Voice AI Dispatch</span>
+                      <span class="fsm-card-badge" style="background: rgba(99, 102, 241, 0.1); color: #4F46E5;">Voice AI
+                        Dispatch</span>
                     </div>
                   </div>
                 </div>
@@ -1050,16 +1166,22 @@
                       What It Is
                     </div>
                     <p class="fsm-section-desc">
-                      Enterprise Conversational Voice AI engine that synthesizes human-grade speech and real-time telephony agents.
+                      Enterprise Conversational Voice AI engine that synthesizes human-grade speech and real-time
+                      telephony agents.
                     </p>
                   </div>
                   <div class="fsm-card-section why-fsm">
                     <div class="fsm-section-label" style="color: #4F46E5;">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path
+                          d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z" />
+                      </svg>
                       Why We Used in FSM
                     </div>
                     <p class="fsm-section-desc">
-                      Automates hands-free outbound dispatch calls to technicians for emergency tickets, reads instructions aloud while driving, and delivers proactive voice updates to clients.
+                      Automates hands-free outbound dispatch calls to technicians for emergency tickets, reads
+                      instructions aloud while driving, and delivers proactive voice updates to clients.
                     </p>
                   </div>
                 </div>
@@ -1067,21 +1189,24 @@
             </div>
 
             <!-- 2. WhatsApp (Bottom-Left) -->
-            <div data-w-id="da1f1232-8451-b6ef-3100-02c921449e2b" class="coin-wrapper _04" style="position: absolute; bottom: 25%; left: 16%; top: auto; right: auto;" tabindex="0" aria-label="WhatsApp Integration">
-              <div class="coin-logo-wrap"><img
-                  src="assets/icon-whatsapp.svg"
-                  loading="lazy" alt="WhatsApp" class="coin-image" /></div>
+            <div data-w-id="da1f1232-8451-b6ef-3100-02c921449e2b" class="coin-wrapper _04"
+              style="position: absolute; bottom: 25%; left: 16%; top: auto; right: auto;" tabindex="0"
+              aria-label="WhatsApp Integration">
+              <div class="coin-logo-wrap"><img src="assets/icon-whatsapp.svg" loading="lazy" alt="WhatsApp"
+                  class="coin-image" /></div>
               <div class="coin-glow _04" style="background-color: #25D366;"></div>
 
               <div class="fsm-integration-tooltip tooltip-right-bottom">
                 <div class="fsm-card-header">
                   <div class="fsm-card-brand">
-                    <div class="fsm-card-icon-box" style="background: rgba(37, 211, 102, 0.12); border-color: rgba(37, 211, 102, 0.25);">
+                    <div class="fsm-card-icon-box"
+                      style="background: rgba(37, 211, 102, 0.12); border-color: rgba(37, 211, 102, 0.25);">
                       <img src="assets/icon-whatsapp.svg" alt="WhatsApp">
                     </div>
                     <div>
                       <div class="fsm-card-title">WhatsApp Business</div>
-                      <span class="fsm-card-badge" style="background: rgba(37, 211, 102, 0.12); color: #059669;">Instant Field Messaging</span>
+                      <span class="fsm-card-badge" style="background: rgba(37, 211, 102, 0.12); color: #059669;">Instant
+                        Field Messaging</span>
                     </div>
                   </div>
                 </div>
@@ -1092,16 +1217,23 @@
                       What It Is
                     </div>
                     <p class="fsm-section-desc">
-                      Global secure messaging platform providing instant two-way chat, media sharing, and real-time GPS location exchange.
+                      Global secure messaging platform providing instant two-way chat, media sharing, and real-time GPS
+                      location exchange.
                     </p>
                   </div>
-                  <div class="fsm-card-section why-fsm" style="background: #F0FDF4; border-color: rgba(37, 211, 102, 0.2);">
+                  <div class="fsm-card-section why-fsm"
+                    style="background: #F0FDF4; border-color: rgba(37, 211, 102, 0.2);">
                     <div class="fsm-section-label" style="color: #059669;">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path
+                          d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z" />
+                      </svg>
                       Why We Used in FSM
                     </div>
                     <p class="fsm-section-desc">
-                      Instantly pings technicians with job alerts and location pins with zero app install, collects photo proof upon completion, and sends live ETA tracking links to customers.
+                      Instantly pings technicians with job alerts and location pins with zero app install, collects
+                      photo proof upon completion, and sends live ETA tracking links to customers.
                     </p>
                   </div>
                 </div>
@@ -1109,21 +1241,24 @@
             </div>
 
             <!-- 3. Mail (Top-Right) -->
-            <div data-w-id="587f2334-ad53-a9b3-1ec3-1fc1f9c968ad" class="coin-wrapper _06" style="position: absolute; top: 4%; right: 14%; bottom: auto; left: auto;" tabindex="0" aria-label="Mail Integration">
-              <div class="coin-logo-wrap"><img
-                  src="assets/icon-mail.svg"
-                  loading="lazy" alt="Mail" class="coin-image" /></div>
+            <div data-w-id="587f2334-ad53-a9b3-1ec3-1fc1f9c968ad" class="coin-wrapper _06"
+              style="position: absolute; top: 4%; right: 14%; bottom: auto; left: auto;" tabindex="0"
+              aria-label="Mail Integration">
+              <div class="coin-logo-wrap"><img src="assets/icon-mail.svg" loading="lazy" alt="Mail"
+                  class="coin-image" /></div>
               <div class="coin-glow _06" style="background-color: #2563EB;"></div>
 
               <div class="fsm-integration-tooltip tooltip-left-top">
                 <div class="fsm-card-header">
                   <div class="fsm-card-brand">
-                    <div class="fsm-card-icon-box" style="background: rgba(37, 99, 235, 0.12); border-color: rgba(37, 99, 235, 0.25);">
+                    <div class="fsm-card-icon-box"
+                      style="background: rgba(37, 99, 235, 0.12); border-color: rgba(37, 99, 235, 0.25);">
                       <img src="assets/icon-mail.svg" alt="Mail">
                     </div>
                     <div>
                       <div class="fsm-card-title">Enterprise Mail</div>
-                      <span class="fsm-card-badge" style="background: rgba(37, 99, 235, 0.1); color: #1D4ED8;">Automated Ticket Intake</span>
+                      <span class="fsm-card-badge" style="background: rgba(37, 99, 235, 0.1); color: #1D4ED8;">Automated
+                        Ticket Intake</span>
                     </div>
                   </div>
                 </div>
@@ -1134,16 +1269,23 @@
                       What It Is
                     </div>
                     <p class="fsm-section-desc">
-                      Universal email integration and inbound webhook parser for structured enterprise communication and audit trails.
+                      Universal email integration and inbound webhook parser for structured enterprise communication and
+                      audit trails.
                     </p>
                   </div>
-                  <div class="fsm-card-section why-fsm" style="background: #EFF6FF; border-color: rgba(37, 99, 235, 0.18);">
+                  <div class="fsm-card-section why-fsm"
+                    style="background: #EFF6FF; border-color: rgba(37, 99, 235, 0.18);">
                     <div class="fsm-section-label" style="color: #1D4ED8;">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path
+                          d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z" />
+                      </svg>
                       Why We Used in FSM
                     </div>
                     <p class="fsm-section-desc">
-                      Converts inbound service emails into prioritized FSM work orders, sends signed PDF completion certificates, and triggers urgent manager escalation alerts for SLA breaches.
+                      Converts inbound service emails into prioritized FSM work orders, sends signed PDF completion
+                      certificates, and triggers urgent manager escalation alerts for SLA breaches.
                     </p>
                   </div>
                 </div>
@@ -1151,21 +1293,24 @@
             </div>
 
             <!-- 4. Excel (Bottom-Right) -->
-            <div data-w-id="4feda2ac-c997-bdae-94fb-5039aea8f94b" class="coin-wrapper _07" style="position: absolute; bottom: 25%; right: 16%; top: auto; left: auto;" tabindex="0" aria-label="Microsoft Excel Integration">
-              <div class="coin-logo-wrap"><img
-                  src="assets/icon-excel.svg"
-                  loading="lazy" alt="Microsoft Excel" class="coin-image" /></div>
+            <div data-w-id="4feda2ac-c997-bdae-94fb-5039aea8f94b" class="coin-wrapper _07"
+              style="position: absolute; bottom: 25%; right: 16%; top: auto; left: auto;" tabindex="0"
+              aria-label="Microsoft Excel Integration">
+              <div class="coin-logo-wrap"><img src="assets/icon-excel.svg" loading="lazy" alt="Microsoft Excel"
+                  class="coin-image" /></div>
               <div class="coin-glow _07" style="background-color: #107C41;"></div>
 
               <div class="fsm-integration-tooltip tooltip-left-bottom">
                 <div class="fsm-card-header">
                   <div class="fsm-card-brand">
-                    <div class="fsm-card-icon-box" style="background: rgba(16, 124, 65, 0.12); border-color: rgba(16, 124, 65, 0.25);">
+                    <div class="fsm-card-icon-box"
+                      style="background: rgba(16, 124, 65, 0.12); border-color: rgba(16, 124, 65, 0.25);">
                       <img src="assets/icon-excel.svg" alt="Microsoft Excel">
                     </div>
                     <div>
                       <div class="fsm-card-title">Microsoft Excel</div>
-                      <span class="fsm-card-badge" style="background: rgba(16, 124, 65, 0.1); color: #047857;">Data Sync & Reports</span>
+                      <span class="fsm-card-badge" style="background: rgba(16, 124, 65, 0.1); color: #047857;">Data Sync
+                        & Reports</span>
                     </div>
                   </div>
                 </div>
@@ -1176,47 +1321,60 @@
                       What It Is
                     </div>
                     <p class="fsm-section-desc">
-                      Industry-standard spreadsheet format for managing tabular business data, bulk equipment inventories, and financial analysis.
+                      Industry-standard spreadsheet format for managing tabular business data, bulk equipment
+                      inventories, and financial analysis.
                     </p>
                   </div>
-                  <div class="fsm-card-section why-fsm" style="background: #F0FDF4; border-color: rgba(16, 124, 65, 0.2);">
+                  <div class="fsm-card-section why-fsm"
+                    style="background: #F0FDF4; border-color: rgba(16, 124, 65, 0.2);">
                     <div class="fsm-section-label" style="color: #047857;">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path
+                          d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z" />
+                      </svg>
                       Why We Used in FSM
                     </div>
                     <p class="fsm-section-desc">
-                      Enables bulk upload of preventative maintenance schedules, synchronizes parts pricing, and exports technician billable hours and SLA compliance metrics for accounting.
+                      Enables bulk upload of preventative maintenance schedules, synchronizes parts pricing, and exports
+                      technician billable hours and SLA compliance metrics for accounting.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-          </div><div class="tools-center-image" data-w-id="c596b80d-3303-6041-678c-347ac681f32a" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0); width: 140px; height: 48px; display: flex; align-items: center; justify-content: center; gap: 10px; position: absolute; inset: 0; margin: auto; z-index: 10; pointer-events: none;">
-  <img src="assets/fsm-logo-icon.png" alt="FSM Logo" style="height: 38px; width: auto; object-fit: contain; display: block;" />
-  <span style="font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: 28px; color: #0D062D; letter-spacing: -0.03em; line-height: 1;">FSM</span>
-</div>
+          </div>
+          <div class="tools-center-image" data-w-id="c596b80d-3303-6041-678c-347ac681f32a"
+            style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0); width: 140px; height: 48px; display: flex; align-items: center; justify-content: center; gap: 10px; position: absolute; inset: 0; margin: auto; z-index: 10; pointer-events: none;">
+            <img src="assets/fsm-logo-icon.png" alt="FSM Logo"
+              style="height: 38px; width: auto; object-fit: contain; display: block;" />
+            <span
+              style="font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: 28px; color: #0D062D; letter-spacing: -0.03em; line-height: 1;">FSM</span>
+          </div>
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section" style="padding-bottom: 0;">
       <div class="w-layout-blockcontainer container-big w-container">
         <div Section="Heading" class="heading-wraper">
-          <h2 class="heading-title">Frequently Asked Questions</h2>
+          <h3 class="heading-title">Frequently Asked Questions</h3>
           <div class="subheading-wrap faq">
-            <p class="paragraph-large center">Everything you need to know before getting started. Helping teams move
+            <p class="paragraph-large center" style="font-size: 16px;">Everything you need to know before getting
+              started. Helping teams move
               forward with confidence.</p>
           </div>
         </div>
         <div class="faq-list">
-          <div data-w-id="6e46ae1d-825b-c96e-4ab5-8534834ac761" class="faq-accordion">
-            <div class="faq-title">
+          <div data-w-id="6e46ae1d-825b-c96e-4ab5-8534834ac761" class="faq-accordion" style="padding: 15px;">
+            <div class="faq-title" style="padding: 0;">
               <div class="icon-bg">
                 <div class="plus-minus">
                   <div class="horizontal-line"></div>
                   <div class="vertical-line"></div>
                 </div>
               </div>
-              <h4 class="faq-heading">What capabilities does the FSM platform provide?</h4>
+              <h4 class="faq-heading" style="font-weight: 400; font-size: 18px;">What capabilities does the FSM platform
+                provide?</h4>
             </div>
             <div class="faq-answer">
               <p class="faq-ans-text">We provide end-to-end digital solutions including UI/UX design, branding, web
@@ -1227,15 +1385,16 @@
               srcset="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group-p-500.webp 500w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group-p-800.webp 800w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group-p-1080.webp 1080w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group-p-1600.webp 1600w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group.webp 1963w"
               alt="" class="faq-image" />
           </div>
-          <div data-w-id="6e46ae1d-825b-c96e-4ab5-8534834ac76b" class="faq-accordion">
-            <div class="faq-title">
+          <div data-w-id="6e46ae1d-825b-c96e-4ab5-8534834ac76b" class="faq-accordion" style="padding: 15px;">
+            <div class="faq-title" style="padding: 0;">
               <div class="icon-bg">
                 <div class="plus-minus">
                   <div class="horizontal-line"></div>
                   <div class="vertical-line"></div>
                 </div>
               </div>
-              <h4 class="faq-heading">Which service businesses can benefit from FSM?</h4>
+              <h4 class="faq-heading" style="font-weight: 400; font-size: 18px;">Which service businesses can benefit
+                from FSM?</h4>
             </div>
             <div class="faq-answer">
               <p class="faq-ans-text">FSM unifies service ticket creation, technician dispatch, dynamic SLA countdowns,
@@ -1246,15 +1405,16 @@
               srcset="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group-p-500.webp 500w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group-p-800.webp 800w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group-p-1080.webp 1080w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group-p-1600.webp 1600w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group.webp 1963w"
               alt="" class="faq-image" />
           </div>
-          <div data-w-id="6e46ae1d-825b-c96e-4ab5-8534834ac775" class="faq-accordion">
-            <div class="faq-title">
+          <div data-w-id="6e46ae1d-825b-c96e-4ab5-8534834ac775" class="faq-accordion" style="padding: 15px;">
+            <div class="faq-title" style="padding: 0;">
               <div class="icon-bg">
                 <div class="plus-minus">
                   <div class="horizontal-line"></div>
                   <div class="vertical-line"></div>
                 </div>
               </div>
-              <h4 class="faq-heading">How does multi-tenant data isolation work?</h4>
+              <h4 class="faq-heading" style="font-weight: 400; font-size: 18px;">How does multi-tenant data isolation
+                work?</h4>
             </div>
             <div class="faq-answer">
               <p class="faq-ans-text">FSM unifies service ticket creation, technician dispatch, dynamic SLA countdowns,
@@ -1265,15 +1425,16 @@
               srcset="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group-p-500.webp 500w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group-p-800.webp 800w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group-p-1080.webp 1080w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group-p-1600.webp 1600w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group.webp 1963w"
               alt="" class="faq-image" />
           </div>
-          <div data-w-id="6e46ae1d-825b-c96e-4ab5-8534834ac77f" class="faq-accordion">
-            <div class="faq-title">
+          <div data-w-id="6e46ae1d-825b-c96e-4ab5-8534834ac77f" class="faq-accordion" style="padding: 15px;">
+            <div class="faq-title" style="padding: 0;">
               <div class="icon-bg">
                 <div class="plus-minus">
                   <div class="horizontal-line"></div>
                   <div class="vertical-line"></div>
                 </div>
               </div>
-              <h4 class="faq-heading">How is service verified in the field?</h4>
+              <h4 class="faq-heading" style="font-weight: 400; font-size: 18px;">How is service verified in the field?
+              </h4>
             </div>
             <div class="faq-answer">
               <p class="faq-ans-text">FSM unifies service ticket creation, technician dispatch, dynamic SLA countdowns,
@@ -1284,15 +1445,16 @@
               srcset="https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group-p-500.webp 500w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group-p-800.webp 800w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group-p-1080.webp 1080w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group-p-1600.webp 1600w, https://cdn.prod.website-files.com/695c7d712c7a871e68ae40b0/696221807b06740cad9862aa_Mask%20group.webp 1963w"
               alt="" class="faq-image" />
           </div>
-          <div data-w-id="6e46ae1d-825b-c96e-4ab5-8534834ac789" class="faq-accordion">
-            <div class="faq-title">
+          <div data-w-id="6e46ae1d-825b-c96e-4ab5-8534834ac789" class="faq-accordion" style="padding: 15px;">
+            <div class="faq-title" style="padding: 0;">
               <div class="icon-bg">
                 <div class="plus-minus">
                   <div class="horizontal-line"></div>
                   <div class="vertical-line"></div>
                 </div>
               </div>
-              <h4 class="faq-heading">Can FSM integrate with our existing ERP or CRM?</h4>
+              <h4 class="faq-heading" style="font-weight: 400; font-size: 18px;">Can FSM integrate with our existing ERP
+                or CRM?</h4>
             </div>
             <div class="faq-answer">
               <p class="faq-ans-text">FSM unifies service ticket creation, technician dispatch, dynamic SLA countdowns,
@@ -1311,17 +1473,20 @@
         <div class="cta-content-wrap">
           <div class="cta-inner">
             <div class="cta-content-title">
-              <h2 class="cta-title">Ready to Connect Your<br>Field Service Operations?</h2>
-              <p class="sub-text">Bring service requests, people, locations, SLA visibility, and service verification
+              <h3 class="cta-title">Ready to Connect Your<br>Field Service Operations?</h3>
+              <p class="sub-text" style="font-size: 16px;">Bring service requests, people, locations, SLA visibility,
+                and service verification
                 together with FSM.</p>
             </div>
             <div data-w-id="f33e2fc7-8319-f873-936c-8c3a3f6c4472" style="opacity: 1;" class="cta-from-wrap">
               <div class="footer-form-block w-form">
-                <form id="Footer-form" name="email-form" data-name="Email Form" method="get" class="footer-form"
-                  data-wf-page-id="695c7d712c7a871e68ae409d" data-wf-element-id="9dc301d0-025b-be7c-4cc0-8d915142549b">
+                <form id="Footer-form" style="height: 50px;" name="email-form" data-name="Email Form" method="get"
+                  class="footer-form" data-wf-page-id="695c7d712c7a871e68ae409d"
+                  data-wf-element-id="9dc301d0-025b-be7c-4cc0-8d915142549b">
                   <input class="footer-text-field w-input" maxlength="256" name="email" data-name="Email"
                     placeholder="Your email address" type="email" id="email" required="" /><input type="submit"
-                    data-wait="Please wait..." class="submit-button w-button" value="Request Demo" />
+                    data-wait="Please wait..." class="submit-button w-button"
+                    style="padding: 5px; font-size: 15px; width: 170px;" value="Request Demo" />
                 </form>
                 <div class="success-message w-form-done">
                   <div>Thank you! Your submission has been received!</div>
@@ -1345,32 +1510,52 @@
         </div>
       </div>
     </section>
-        <footer class="footer-minimal" style="background: #ffffff; border-top: 1px solid #ECECF4; padding: 44px 0 28px; font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, sans-serif;">
-      <div class="w-layout-blockcontainer container-big w-container" style="max-width: 1240px; margin: 0 auto; padding: 0 24px;">
+    <footer class="footer-minimal"
+      style="background: #ffffff; border-top: 1px solid #ECECF4; padding: 44px 0 28px; font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, sans-serif;">
+      <div class="w-layout-blockcontainer container-big w-container"
+        style="max-width: 1240px; margin: 0 auto; padding: 0 24px;">
         <!-- Top Row: Logo & Nav Links -->
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; padding-bottom: 28px; border-bottom: 1px solid #F0F0F5;">
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; padding-bottom: 28px; border-bottom: 1px solid #F0F0F5;">
           <div style="display: flex; align-items: center; gap: 14px;">
             <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-              <img src="assets/fsm-logo-icon.png" alt="FSM Logo" style="height: 34px; width: auto; object-fit: contain; display: block;" />
-              <span style="font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: 24px; color: #0D062D; letter-spacing: -0.03em;">FSM</span>
+              <img src="assets/fsm-logo-icon.png" alt="FSM Logo"
+                style="height: 34px; width: auto; object-fit: contain; display: block;" />
+              <span
+                style="font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: 24px; color: #0D062D; letter-spacing: -0.03em;">FSM</span>
             </a>
             <span style="color: #D1D5DB; font-size: 16px;">|</span>
-            <span style="color: #6B7280; font-size: 14px; font-weight: 500;">Enterprise Field Service Management Platform</span>
+            <span style="color: #6B7280; font-size: 14px; font-weight: 500;">Enterprise Field Service Management
+              Platform</span>
           </div>
           <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 26px;">
-            <a href="index.html" style="color: #4E4D53; text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s;" onmouseover="this.style.color='#6049E7'" onmouseout="this.style.color='#4E4D53'">Home</a>
-            <a href="solution.html" style="color: #4E4D53; text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s;" onmouseover="this.style.color='#6049E7'" onmouseout="this.style.color='#4E4D53'">Solution</a>
-            <a href="why-fsm.html" style="color: #4E4D53; text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s;" onmouseover="this.style.color='#6049E7'" onmouseout="this.style.color='#4E4D53'">Why FSM</a>
-            <a href="how-it-works.html" style="color: #4E4D53; text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s;" onmouseover="this.style.color='#6049E7'" onmouseout="this.style.color='#4E4D53'">How It Works</a>
-            <a href="business-value.html" style="color: #4E4D53; text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s;" onmouseover="this.style.color='#6049E7'" onmouseout="this.style.color='#4E4D53'">Business Value</a>
-            <a href="#" class="js-open-contact" style="color: #6049E7; text-decoration: none; font-size: 14px; font-weight: 600; padding: 6px 14px; background: rgba(96, 73, 231, 0.08); border-radius: 8px; transition: all 0.2s;" onmouseover="this.style.background='rgba(96, 73, 231, 0.16)'" onmouseout="this.style.background='rgba(96, 73, 231, 0.08)'">Contact Us</a>
+            <a href="index.html"
+              style="color: #4E4D53; text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s;"
+              onmouseover="this.style.color='#6049E7'" onmouseout="this.style.color='#4E4D53'">Home</a>
+            <a href="solution.html"
+              style="color: #4E4D53; text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s;"
+              onmouseover="this.style.color='#6049E7'" onmouseout="this.style.color='#4E4D53'">Solution</a>
+            <a href="why-fsm.html"
+              style="color: #4E4D53; text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s;"
+              onmouseover="this.style.color='#6049E7'" onmouseout="this.style.color='#4E4D53'">Why FSM</a>
+            <a href="how-it-works.html"
+              style="color: #4E4D53; text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s;"
+              onmouseover="this.style.color='#6049E7'" onmouseout="this.style.color='#4E4D53'">How It Works</a>
+            <a href="business-value.html"
+              style="color: #4E4D53; text-decoration: none; font-size: 15px; font-weight: 500; transition: color 0.2s;"
+              onmouseover="this.style.color='#6049E7'" onmouseout="this.style.color='#4E4D53'">Business Value</a>
+            <a href="#" class="js-open-contact"
+              style="color: #6049E7; text-decoration: none; font-size: 14px; font-weight: 600; padding: 6px 14px; background: rgba(96, 73, 231, 0.08); border-radius: 8px; transition: all 0.2s;"
+              onmouseover="this.style.background='rgba(96, 73, 231, 0.16)'"
+              onmouseout="this.style.background='rgba(96, 73, 231, 0.08)'">Contact Us</a>
           </div>
         </div>
 
         <!-- Bottom Row: Copyright & Contact Links -->
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding-top: 22px; font-size: 13.5px; color: #7E7D8A;">
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding-top: 22px; font-size: 13.5px; color: #7E7D8A;">
           <div>© 2026 FSM Platform. All rights reserved. Field Service Management Solution.</div>
-          
+
         </div>
       </div>
     </footer>
@@ -1467,31 +1652,31 @@
       item.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
         document.querySelectorAll('.faq-accordion').forEach(other => other.classList.remove('active'));
-        
-  if (!isActive) item.classList.add('active');
-  });
-  });
+
+        if (!isActive) item.classList.add('active');
+      });
+    });
   </script>
 
 
-<script id="fsm-integration-tooltip-js">
-  document.addEventListener('DOMContentLoaded', function() {
-    const coins = document.querySelectorAll('.coin-wrapper');
-    coins.forEach(coin => {
-      coin.addEventListener('click', function(e) {
-        const wasActive = coin.classList.contains('is-active');
-        coins.forEach(c => c.classList.remove('is-active'));
-        if (!wasActive) coin.classList.add('is-active');
-        e.stopPropagation();
+  <script id="fsm-integration-tooltip-js">
+    document.addEventListener('DOMContentLoaded', function () {
+      const coins = document.querySelectorAll('.coin-wrapper');
+      coins.forEach(coin => {
+        coin.addEventListener('click', function (e) {
+          const wasActive = coin.classList.contains('is-active');
+          coins.forEach(c => c.classList.remove('is-active'));
+          if (!wasActive) coin.classList.add('is-active');
+          e.stopPropagation();
+        });
+      });
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.coin-wrapper')) {
+          coins.forEach(c => c.classList.remove('is-active'));
+        }
       });
     });
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.coin-wrapper')) {
-        coins.forEach(c => c.classList.remove('is-active'));
-      }
-    });
-  });
-</script>
+  </script>
 
 </body>
 
