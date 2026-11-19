@@ -2525,19 +2525,16 @@ button {
 
 .tools-container .tools-center-image {
   position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  margin: 0 !important;
-  inset: auto !important;
+  inset: 0 !important;
+  margin: auto !important;
+  transform: none !important;
+  width: max-content !important;
+  height: max-content !important;
   z-index: 5 !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   gap: 10px !important;
-  width: auto !important;
-  min-width: 0 !important;
-  height: auto !important;
   padding: 0 !important;
   background: transparent !important;
   border: none !important;

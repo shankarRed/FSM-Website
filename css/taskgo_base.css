@@ -4815,10 +4815,11 @@ p {
 
 .tools-center-image {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
+  inset: 0;
+  margin: auto;
+  transform: none;
+  width: max-content;
+  height: max-content;
   z-index: 5;
 }
 

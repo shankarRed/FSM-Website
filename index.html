@@ -403,19 +403,16 @@
 
     .tools-container .tools-center-image {
       position: absolute !important;
-      top: 50% !important;
-      left: 50% !important;
-      transform: translate(-50%, -50%) !important;
-      margin: 0 !important;
-      inset: auto !important;
+      inset: 0 !important;
+      margin: auto !important;
+      transform: none !important;
+      width: max-content !important;
+      height: max-content !important;
       z-index: 5 !important;
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
       gap: 10px !important;
-      width: auto !important;
-      min-width: 0 !important;
-      height: auto !important;
       padding: 0 !important;
       background: transparent !important;
       border: none !important;
@@ -1593,7 +1590,7 @@
                 </div>
               </div>
               <div class="tools-center-image"
-                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 0; z-index: 5; pointer-events: none; background: transparent; border: none; box-shadow: none; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                style="position: absolute; inset: 0; margin: auto; transform: none; width: max-content; height: max-content; z-index: 5; pointer-events: none; background: transparent; border: none; box-shadow: none; display: flex; align-items: center; justify-content: center; gap: 10px;">
                 <img src="https://res.cloudinary.com/o6vaof4o/image/upload/v1795069639/fsm/assets/fsm-logo-icon.png"
                   alt="FSM Logo" style="height: 38px; width: auto; object-fit: contain; display: block;" />
                 <span
