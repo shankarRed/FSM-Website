@@ -1275,12 +1275,13 @@
         <input type="text" class="fsm-input" placeholder="Full Name *" required />
         <input type="email" class="fsm-input" placeholder="Corporate Email Address *" required />
         <input type="text" class="fsm-input" placeholder="Company / Organization *" required />
-        <select class="fsm-input">
-          <option>Multi-Brand Service Company</option>
-          <option>Independent Service Provider</option>
-          <option>Brand-Authorized Service Centre</option>
-          <option>Installation &amp; Maintenance Contractor</option>
-          <option>Commercial, Industrial or IT Equipment</option>
+        <select class="fsm-input" required>
+          <option value="" disabled selected hidden>Select Business Type *</option>
+          <option value="Multi-Brand Service Company">Multi-Brand Service Company</option>
+          <option value="Independent Service Provider">Independent Service Provider</option>
+          <option value="Brand-Authorized Service Centre">Brand-Authorized Service Centre</option>
+          <option value="Installation &amp; Maintenance Contractor">Installation &amp; Maintenance Contractor</option>
+          <option value="Commercial, Industrial or IT Equipment">Commercial, Industrial or IT Equipment</option>
         </select>
         <textarea class="fsm-input" rows="3" placeholder="Briefly describe your field team requirements..."></textarea>
         <button type="submit" class="fsm-submit-btn">Submit Inquiry</button>

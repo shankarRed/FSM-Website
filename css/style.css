@@ -2536,15 +2536,27 @@ button {
   justify-content: center !important;
   gap: 10px !important;
   width: auto !important;
-  min-width: 136px !important;
+  min-width: 0 !important;
   height: auto !important;
-  padding: 8px 18px !important;
-  background: #FFFFFF !important;
-  border: 1.5px solid rgba(226, 232, 240, 0.95) !important;
-  border-radius: 16px !important;
-  box-shadow: 0 10px 25px -5px rgba(13, 6, 45, 0.1), 0 4px 10px rgba(13, 6, 45, 0.04) !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
   pointer-events: none !important;
   transition: opacity 0.25s ease, visibility 0.25s ease !important;
+}
+
+select.fsm-input {
+  cursor: pointer;
+}
+
+select.fsm-input:invalid {
+  color: #8E8E93 !important;
+}
+
+select.fsm-input option {
+  color: #0D062D !important;
 }
 
 .tools-container:has(.coin-wrapper.is-active) .tools-center-image,

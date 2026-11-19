@@ -414,13 +414,13 @@
       justify-content: center !important;
       gap: 10px !important;
       width: auto !important;
-      min-width: 136px !important;
+      min-width: 0 !important;
       height: auto !important;
-      padding: 8px 18px !important;
-      background: #FFFFFF !important;
-      border: 1.5px solid rgba(226, 232, 240, 0.95) !important;
-      border-radius: 16px !important;
-      box-shadow: 0 10px 25px -5px rgba(13, 6, 45, 0.1), 0 4px 10px rgba(13, 6, 45, 0.04) !important;
+      padding: 0 !important;
+      background: transparent !important;
+      border: none !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
       pointer-events: none !important;
       transition: opacity 0.25s ease, visibility 0.25s ease !important;
     }
@@ -432,6 +432,18 @@
       opacity: 0 !important;
       visibility: hidden !important;
       pointer-events: none !important;
+    }
+
+    select.fsm-input {
+      cursor: pointer;
+    }
+
+    select.fsm-input:invalid {
+      color: #8E8E93 !important;
+    }
+
+    select.fsm-input option {
+      color: #0D062D !important;
     }
 
     .faq-col .faq-list {
@@ -1581,11 +1593,11 @@
                 </div>
               </div>
               <div class="tools-center-image"
-                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 0; z-index: 5; pointer-events: none;">
+                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 0; z-index: 5; pointer-events: none; background: transparent; border: none; box-shadow: none; display: flex; align-items: center; justify-content: center; gap: 10px;">
                 <img src="https://res.cloudinary.com/o6vaof4o/image/upload/v1795069639/fsm/assets/fsm-logo-icon.png"
-                  alt="FSM Logo" style="height: 32px; width: auto; object-fit: contain; display: block;" />
+                  alt="FSM Logo" style="height: 38px; width: auto; object-fit: contain; display: block;" />
                 <span
-                  style="font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: 24px; color: #0D062D; letter-spacing: -0.03em; line-height: 1;">FSM</span>
+                  style="font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: 28px; color: #0D062D; letter-spacing: -0.03em; line-height: 1;">FSM</span>
               </div>
             </div>
           </div>
@@ -1820,12 +1832,13 @@
         <input type="text" class="fsm-input" placeholder="Full Name *" required />
         <input type="email" class="fsm-input" placeholder="Corporate Email Address *" required />
         <input type="text" class="fsm-input" placeholder="Company / Organization *" required />
-        <select class="fsm-input">
-          <option>Multi-Brand Service Company</option>
-          <option>Independent Service Provider</option>
-          <option>Brand-Authorized Service Centre</option>
-          <option>Installation & Maintenance Contractor</option>
-          <option>Commercial, Industrial or IT Equipment</option>
+        <select class="fsm-input" required>
+          <option value="" disabled selected hidden>Select Business Type *</option>
+          <option value="Multi-Brand Service Company">Multi-Brand Service Company</option>
+          <option value="Independent Service Provider">Independent Service Provider</option>
+          <option value="Brand-Authorized Service Centre">Brand-Authorized Service Centre</option>
+          <option value="Installation & Maintenance Contractor">Installation & Maintenance Contractor</option>
+          <option value="Commercial, Industrial or IT Equipment">Commercial, Industrial or IT Equipment</option>
         </select>
         <textarea class="fsm-input" rows="3" placeholder="Briefly describe your field team requirements..."></textarea>
         <button type="submit" class="fsm-submit-btn">Submit Inquiry</button>
