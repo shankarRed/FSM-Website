@@ -27,13 +27,18 @@ const server = http.createServer((req, res) => {
     reqPath = '/index.html';
   }
 
-  const filePath = path.normalize(path.join(PUBLIC_DIR, reqPath));
+  let filePath = path.normalize(path.join(PUBLIC_DIR, reqPath));
 
   // Security: prevent directory traversal
   if (!filePath.startsWith(PUBLIC_DIR)) {
     res.writeHead(403, { 'Content-Type': 'text/plain' });
     res.end('403 Forbidden');
     return;
+  }
+
+  // If file doesn't exist directly, check if appending .html matches a file
+  if (!fs.existsSync(filePath) && fs.existsSync(filePath + '.html')) {
+    filePath = filePath + '.html';
   }
 
   fs.stat(filePath, (err, stats) => {
