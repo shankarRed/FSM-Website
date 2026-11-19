@@ -41,7 +41,6 @@ const STATIC_FILES = {
   '/js/webflow.js': path.join(__dirname, 'js', 'webflow.js'),
 };
 
-// In-memory cache for ultra-fast responses
 const FILE_CACHE = {};
 
 for (const [route, filePath] of Object.entries(STATIC_FILES)) {
@@ -57,13 +56,13 @@ for (const [route, filePath] of Object.entries(STATIC_FILES)) {
   }
 }
 
-const server = http.createServer((req, res) => {
+function handleRequest(req, res) {
   let reqPath = decodeURI(req.url.split('?')[0].split('#')[0]);
   if (reqPath === '' || reqPath === '/') {
     reqPath = '/';
   }
 
-  // 1. Serve cached files directly from memory (instant, no disk lookup)
+  // 1. In-memory cache for all pages and core styles/scripts
   if (FILE_CACHE[reqPath]) {
     const item = FILE_CACHE[reqPath];
     res.writeHead(200, {
@@ -76,7 +75,7 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  // 2. Fall back to disk lookup for any other static asset
+  // 2. Disk lookup fallback
   let filePath = path.normalize(path.join(PUBLIC_DIR, reqPath));
 
   if (!filePath.startsWith(PUBLIC_DIR)) {
@@ -85,7 +84,6 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  // Clean URL support fallback
   if (!fs.existsSync(filePath) && fs.existsSync(filePath + '.html')) {
     filePath = filePath + '.html';
   }
@@ -108,10 +106,15 @@ const server = http.createServer((req, res) => {
     const stream = fs.createReadStream(filePath);
     stream.pipe(res);
   });
-});
+}
 
-server.listen(PORT, () => {
-  console.log(`FSM static server running at http://localhost:${PORT}/`);
-});
+// Local server
+if (!process.env.VERCEL) {
+  const server = http.createServer(handleRequest);
+  server.listen(PORT, () => {
+    console.log(`FSM static server running at http://localhost:${PORT}/`);
+  });
+}
 
-module.exports = server;
+// Vercel serverless function entrypoint
+module.exports = handleRequest;
