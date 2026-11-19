@@ -63,7 +63,27 @@ function handleRequest(req, res) {
     reqPath = '/';
   }
 
-  // 1. In-memory cache for all pages and core styles/scripts
+  // 1. In local development, read directly from disk so live edits are reflected immediately
+  if (!process.env.VERCEL && STATIC_FILES[reqPath]) {
+    try {
+      const filePath = STATIC_FILES[reqPath];
+      if (fs.existsSync(filePath)) {
+        const ext = path.extname(filePath).toLowerCase();
+        const contentType = MIME_TYPES[ext] || 'application/octet-stream';
+        const content = fs.readFileSync(filePath);
+        res.writeHead(200, {
+          'Content-Type': contentType,
+          'Cache-Control': 'no-cache, no-store, must-revalidate'
+        });
+        res.end(content);
+        return;
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  // 2. In production (Vercel serverless), use in-memory cache
   if (FILE_CACHE[reqPath]) {
     const item = FILE_CACHE[reqPath];
     res.writeHead(200, {

@@ -664,49 +664,57 @@
 
     /* SLA Performance Card Alignment */
     .bottom-content-wrap.bottom {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
       gap: 24px;
+      padding: 24px 28px !important;
     }
 
     .bottom-content-wrap.bottom .bottom-title-warp {
-      max-width: 360px;
-      z-index: 2;
+      max-width: 360px !important;
+      z-index: 2 !important;
       flex: 1 1 auto;
+      padding-left: 0 !important;
     }
 
     .bottom-content-wrap.bottom .bottom-image-warp {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: transparent;
-      border-radius: 20px;
-      overflow: hidden;
-      max-width: 390px;
-      width: 100%;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: transparent !important;
+      background-color: transparent !important;
+      border-radius: 16px !important;
+      overflow: hidden !important;
+      max-width: 410px !important;
+      width: 100% !important;
+      height: auto !important;
+      align-self: center !important;
       flex: 0 0 auto;
-      z-index: 2;
+      z-index: 2 !important;
+      box-shadow: none !important;
+      border: none !important;
     }
 
     .bottom-content-wrap.bottom .bottom-image {
-      width: 100%;
-      height: auto;
-      max-width: 100%;
-      display: block;
-      border-radius: 20px;
-      object-fit: contain;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      width: 100% !important;
+      height: auto !important;
+      max-width: 100% !important;
+      display: block !important;
+      border-radius: 16px !important;
+      object-fit: contain !important;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06) !important;
     }
 
     @media screen and (max-width: 767px) {
       .bottom-content-wrap.bottom {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: column !important;
+        align-items: stretch !important;
         gap: 20px;
+        padding: 20px !important;
       }
       .bottom-content-wrap.bottom .bottom-image-warp {
-        max-width: 100%;
+        max-width: 100% !important;
       }
     }
   </style>
@@ -1028,17 +1036,17 @@
                   loading="lazy" class="charting-image" />
               </div>
             </div>
-            <div class="bottom-content-wrap bottom">
-              <div class="bottom-title-warp">
+            <div class="bottom-content-wrap bottom" style="display: flex; align-items: center; justify-content: space-between; padding: 24px 28px;">
+              <div class="bottom-title-warp" style="max-width: 360px; padding-left: 0; z-index: 2;">
                 <h4 class="card-title">Real-Time SLA &amp; Progress Tracking</h4>
                 <div id="w-node-_67e4d2c6-ef48-ed85-bb92-62045d9d4074-68ae409d" class="sub-wrap">
                   <p class="card-subtext">Track deadlines, milestones, and performance with live status updates and
                     visual indicators.</p>
                 </div>
               </div>
-              <div class="bottom-image-warp"><img loading="lazy"
+              <div class="bottom-image-warp" style="background: transparent !important; background-color: transparent !important; box-shadow: none !important; border: none !important; border-radius: 16px; overflow: hidden; max-width: 410px; width: 100%; height: auto; align-self: center; display: flex; align-items: center; justify-content: center; z-index: 2;"><img loading="lazy"
                   src="https://res.cloudinary.com/o6vaof4o/image/upload/v1795075139/fsm/cdn/sla-performance-overview.jpg"
-                  alt="SLA Performance Overview" class="bottom-image" /></div><img
+                  alt="SLA Performance Overview" class="bottom-image" style="width: 100%; height: auto; max-width: 410px; display: block; border-radius: 16px; object-fit: contain; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);" /></div><img
                 src="https://res.cloudinary.com/o6vaof4o/image/upload/v1795069841/fsm/cdn/696346f458a9dbdaa8d87aee_Mask_group__1_.png"
                 loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 939.9913940429688px"
                 srcset="https://res.cloudinary.com/o6vaof4o/image/upload/v1795069843/fsm/cdn/696346f458a9dbdaa8d87aee_Mask_group__1_-p-500.png 500w, https://res.cloudinary.com/o6vaof4o/image/upload/v1795069843/fsm/cdn/696346f458a9dbdaa8d87aee_Mask_group__1_-p-800.png 800w, https://res.cloudinary.com/o6vaof4o/image/upload/v1795069844/fsm/cdn/696346f458a9dbdaa8d87aee_Mask_group__1_-p-1080.png 1080w, https://res.cloudinary.com/o6vaof4o/image/upload/v1795069841/fsm/cdn/696346f458a9dbdaa8d87aee_Mask_group__1_.png 1257w"

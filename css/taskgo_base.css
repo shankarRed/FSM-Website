@@ -4269,13 +4269,18 @@ p {
 
 .bottom-content-wrap.bottom {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .bottom-image {
   z-index: 99;
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
-  max-width: 372px;
+  max-width: 410px;
+  height: auto;
+  display: block;
 }
 
 .bottom-title-warp {
@@ -4294,8 +4299,13 @@ p {
 .bottom-image-warp {
   z-index: 1;
   border-radius: var(--_redius---regular);
-  background-color: var(--_color---white);
+  background-color: transparent;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  align-self: center;
 }
 
 .right-content-wrap {
