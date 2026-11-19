@@ -2474,3 +2474,29 @@ button {
   border-radius: 16px !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
 }
+
+/* Completely disable loading and scroll animations for Features section */
+#Features,
+#Features *,
+#Features .heading-wraper,
+#Features .heading-title,
+#Features .subheading-wrap,
+#Features .feature-container,
+#Features .right-content-wrap,
+#Features .tools-bottom-grid,
+#Features .block-card-wrap,
+#Features .block-card-wrap._01,
+#Features .block-card-wrap._02,
+#Features .block-card-wrap._03,
+#Features .bottom-content-wrap,
+#Features .bottom-content-wrap.bottom,
+#Features .charting-image,
+#Features .rt-tall-image,
+#Features .bottom-image {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  animation: none !important;
+  transition: none !important;
+  will-change: auto !important;
+}

@@ -4234,6 +4234,21 @@ p {
   justify-content: flex-start;
   align-items: stretch;
   display: grid;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+#Features,
+#Features *,
+#Features .feature-container,
+#Features .block-card-wrap,
+#Features .bottom-content-wrap {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  animation: none !important;
+  transition: none !important;
+  will-change: auto !important;
 }
 
 .rt-tall-image {
