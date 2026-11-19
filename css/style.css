@@ -2390,3 +2390,43 @@ button {
   outline: 2px solid var(--color-accent-purple);
   outline-offset: 2px;
 }
+
+/* Contact Us Nav Link UI - exact match to Business Value and nav items */
+.desktop-nav-button .nav-link,
+.tab-nav-button .nav-link {
+  display: inline-flex;
+  flex-direction: column;
+  height: 26px;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.desktop-nav-button .nav-link .nav-text,
+.tab-nav-button .nav-link .nav-text {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  height: 26px;
+  font-weight: 500;
+  color: #141416;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+  display: block;
+}
+
+.desktop-nav-button .nav-link:hover .nav-text._01,
+.tab-nav-button .nav-link:hover .nav-text._01 {
+  transform: translateY(-100%);
+}
+
+.desktop-nav-button .nav-link:hover .nav-text._02,
+.tab-nav-button .nav-link:hover .nav-text._02 {
+  transform: translateY(-100%);
+  color: #6049E7;
+}
+
+.desktop-nav-button .nav-link:focus,
+.desktop-nav-button .nav-link:active {
+  outline: none;
+}
