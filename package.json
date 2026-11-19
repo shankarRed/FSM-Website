@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "FSM (Field Service Management) Business Solution Website",
   "scripts": {
-    "start": "node server.js"
+    "start": "node local-server.js"
   },
   "keywords": [
     "fsm",
