@@ -2500,3 +2500,62 @@ button {
   transition: none !important;
   will-change: auto !important;
 }
+
+/* Integrations Center FSM Logo Badge & Symmetrical Alignment */
+.tools-container {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.tools-container .coin-container {
+  margin-top: 0 !important;
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 50 !important;
+  pointer-events: none !important;
+}
+
+.tools-container .coin-container .coin-wrapper {
+  pointer-events: auto !important;
+}
+
+.tools-container .tools-center-image {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important;
+  inset: auto !important;
+  z-index: 5 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  width: auto !important;
+  min-width: 136px !important;
+  height: auto !important;
+  padding: 8px 18px !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid rgba(226, 232, 240, 0.95) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 25px -5px rgba(13, 6, 45, 0.1), 0 4px 10px rgba(13, 6, 45, 0.04) !important;
+  pointer-events: none !important;
+  transition: opacity 0.25s ease, visibility 0.25s ease !important;
+}
+
+.tools-container:has(.coin-wrapper.is-active) .tools-center-image,
+.tools-container:has(.coin-wrapper:hover) .tools-center-image,
+.tools-container.has-active-tooltip .tools-center-image {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.fsm-integration-tooltip {
+  background: #FFFFFF !important;
+  z-index: 300 !important;
+}
