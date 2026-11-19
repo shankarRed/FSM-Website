@@ -39,6 +39,7 @@ const STATIC_FILES = {
   '/css/taskgo_base.css': path.join(__dirname, 'css', 'taskgo_base.css'),
   '/js/main.js': path.join(__dirname, 'js', 'main.js'),
   '/js/webflow.js': path.join(__dirname, 'js', 'webflow.js'),
+  '/assets/sla-performance-overview.jpg': path.join(__dirname, 'assets', 'sla-performance-overview.jpg'),
 };
 
 const FILE_CACHE = {};

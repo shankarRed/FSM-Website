@@ -661,6 +661,54 @@
       color: #1E293B;
       font-weight: 500;
     }
+
+    /* SLA Performance Card Alignment */
+    .bottom-content-wrap.bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .bottom-content-wrap.bottom .bottom-title-warp {
+      max-width: 360px;
+      z-index: 2;
+      flex: 1 1 auto;
+    }
+
+    .bottom-content-wrap.bottom .bottom-image-warp {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border-radius: 20px;
+      overflow: hidden;
+      max-width: 390px;
+      width: 100%;
+      flex: 0 0 auto;
+      z-index: 2;
+    }
+
+    .bottom-content-wrap.bottom .bottom-image {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      display: block;
+      border-radius: 20px;
+      object-fit: contain;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    @media screen and (max-width: 767px) {
+      .bottom-content-wrap.bottom {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+      }
+      .bottom-content-wrap.bottom .bottom-image-warp {
+        max-width: 100%;
+      }
+    }
   </style>
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
@@ -989,8 +1037,8 @@
                 </div>
               </div>
               <div class="bottom-image-warp"><img loading="lazy"
-                  src="https://res.cloudinary.com/o6vaof4o/image/upload/v1795069839/fsm/cdn/695df7993e516b016b691415_Mask_group__3_.svg"
-                  alt="" class="bottom-image" /></div><img
+                  src="https://res.cloudinary.com/o6vaof4o/image/upload/v1795075139/fsm/cdn/sla-performance-overview.jpg"
+                  alt="SLA Performance Overview" class="bottom-image" /></div><img
                 src="https://res.cloudinary.com/o6vaof4o/image/upload/v1795069841/fsm/cdn/696346f458a9dbdaa8d87aee_Mask_group__1_.png"
                 loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 939.9913940429688px"
                 srcset="https://res.cloudinary.com/o6vaof4o/image/upload/v1795069843/fsm/cdn/696346f458a9dbdaa8d87aee_Mask_group__1_-p-500.png 500w, https://res.cloudinary.com/o6vaof4o/image/upload/v1795069843/fsm/cdn/696346f458a9dbdaa8d87aee_Mask_group__1_-p-800.png 800w, https://res.cloudinary.com/o6vaof4o/image/upload/v1795069844/fsm/cdn/696346f458a9dbdaa8d87aee_Mask_group__1_-p-1080.png 1080w, https://res.cloudinary.com/o6vaof4o/image/upload/v1795069841/fsm/cdn/696346f458a9dbdaa8d87aee_Mask_group__1_.png 1257w"
