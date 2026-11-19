@@ -21,6 +21,7 @@ const MIME_TYPES = {
   '.ttf': 'font/ttf'
 };
 
+
 const server = http.createServer((req, res) => {
   let reqPath = decodeURI(req.url.split('?')[0].split('#')[0]);
   if (reqPath === '/' || reqPath === '') {
