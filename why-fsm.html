@@ -81,6 +81,64 @@
       transition: none !important;
     }
 
+    /* Solution Feature Cards Grid (Exact Match to index.html UI requested in media_1795065511784_7ee49b54.png) */
+    .why-cards-container {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .why-solution-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 36px;
+    }
+
+    @media screen and (max-width: 991px) {
+      .why-solution-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .why-solution-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+    }
+
+    .solution-feature-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(226, 232, 240, 0.85);
+      border-radius: 20px;
+      padding: 32px 28px;
+      box-shadow: 0 4px 20px rgba(13, 6, 45, 0.04);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .solution-feature-card:hover {
+      transform: translateY(-4px) !important;
+      border-color: #3B82F6 !important;
+      box-shadow: 0 12px 30px rgba(59, 130, 246, 0.12) !important;
+    }
+
+    .solution-card-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease;
+    }
+
+    .solution-feature-card:hover .solution-card-icon-box {
+      transform: scale(1.08);
+    }
+
     /* Active navigation link text color */
     .navbar-inner-menu .nav-link.w--current,
     .navbar-inner-menu .nav-link.w--current:hover,
@@ -220,8 +278,7 @@
 <body>
   <div class="page-wraper">
     <div data-animation="default" class="navbar w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav"
-      data-easing="ease" data-collapse="medium" role="banner"
-      data-duration="400">
+      data-easing="ease" data-collapse="medium" role="banner" data-duration="400">
       <div class="w-layout-blockcontainer container-big w-container">
         <div class="navbar-wrapper"><a href="index.html" class="navbar-logo-link w-nav-brand"
             style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
@@ -322,93 +379,127 @@
         <div class="heading-wraper" style="text-align: center; margin-bottom: 40px; gap: 0; row-gap: 0;">
           <h2 class="op-gap-title"
             style="font-size: 36px; font-weight: 700; color: #0D062D; text-align: center; margin: 0 0 8px 0; letter-spacing: -0.02em; display: block;">
-            The Operational Velocity Gap</h2>
+            What Sets FSM Apart</h2>
           <p class="paragraph-large center"
-            style="max-width: 650px; margin: 0 auto; color: #64748B; font-size: 16px; line-height: 1.6;">See how FSM
-            transforms traditional field service bottlenecks into automated high-velocity workflows.</p>
+            style="max-width: 650px; margin: 0 auto; color: #64748B; font-size: 16px; line-height: 1.6;">Discover how
+            FSM empowers businesses with greater operational visibility, streamlined service workflows, SLA compliance,
+            and reliable service delivery through essential capabilities.</p>
         </div>
-        <div
-          style="background: #FFFFFF; border: 1px solid rgba(226, 232, 240, 0.8); border-radius: 24px; padding: 40px; box-shadow: 0 8px 30px rgba(13, 6, 45, 0.05); overflow-x: auto;">
-          <table style="width: 100%; border-collapse: collapse; min-width: 700px; text-align: left;">
-            <thead>
-              <tr style="border-bottom: 2px solid #E2E8F0;">
-                <th style="padding: 16px 20px; font-size: 16px; font-weight: 700; color: #0D062D; width: 25%;">
-                  Operational Dimension</th>
-                <th style="padding: 16px 20px; font-size: 16px; font-weight: 700; color: #EF4444; width: 37.5%;">
-                  Traditional Field Operations</th>
-                <th style="padding: 16px 20px; font-size: 16px; font-weight: 700; color: #10B981; width: 37.5%;">FSM
-                  Connected Platform</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style="border-bottom: 1px solid #F1F5F9;">
-                <td style="padding: 18px 20px; font-weight: 600; color: #0D062D; vertical-align: top;">Ticket Assignment
-                </td>
-                <td style="padding: 18px 20px; color: #64748B; line-height: 1.5; vertical-align: top;">Multiple
-                  coordination steps to identify and assign the appropriate support member.</td>
-                <td
-                  style="padding: 18px 20px; color: #0D062D; font-weight: 500; line-height: 1.5; vertical-align: top;">
-                  <span style="color: #10B981; font-weight: 700; margin-right: 6px;">✓</span>Centralized ticket review
-                  and support-member assignment through role-based operations.
-                </td>
-              </tr>
-              <tr style="border-bottom: 1px solid #F1F5F9;">
-                <td style="padding: 18px 20px; font-weight: 600; color: #0D062D; vertical-align: top;">Operational
-                  Visibility</td>
-                <td style="padding: 18px 20px; color: #64748B; line-height: 1.5; vertical-align: top;">Limited
-                  visibility into assigned, pending, in-progress, and completed service requests.</td>
-                <td
-                  style="padding: 18px 20px; color: #0D062D; font-weight: 500; line-height: 1.5; vertical-align: top;">
-                  <span style="color: #10B981; font-weight: 700; margin-right: 6px;">✓</span>Centralized ticket overview
-                  for Managers and Service Managers.
-                </td>
-              </tr>
-              <tr style="border-bottom: 1px solid #F1F5F9;">
-                <td style="padding: 18px 20px; font-weight: 600; color: #0D062D; vertical-align: top;">SLA Management
-                </td>
-                <td style="padding: 18px 20px; color: #64748B; line-height: 1.5; vertical-align: top;">Difficulty
-                  monitoring remaining service time and identifying urgent tickets.</td>
-                <td
-                  style="padding: 18px 20px; color: #0D062D; font-weight: 500; line-height: 1.5; vertical-align: top;">
-                  <span style="color: #10B981; font-weight: 700; margin-right: 6px;">✓</span>Live SLA countdown and
-                  priority visibility for support users.
-                </td>
-              </tr>
-              <tr style="border-bottom: 1px solid #F1F5F9;">
-                <td style="padding: 18px 20px; font-weight: 600; color: #0D062D; vertical-align: top;">Location
-                  Management</td>
-                <td style="padding: 18px 20px; color: #64748B; line-height: 1.5; vertical-align: top;">Limited
-                  visibility into the service destination and field-service location information.</td>
-                <td
-                  style="padding: 18px 20px; color: #0D062D; font-weight: 500; line-height: 1.5; vertical-align: top;">
-                  <span style="color: #10B981; font-weight: 700; margin-right: 6px;">✓</span>Ticket destination tracking
-                  using latitude, longitude, and geoforwarding concepts.
-                </td>
-              </tr>
-              <tr style="border-bottom: 1px solid #F1F5F9;">
-                <td style="padding: 18px 20px; font-weight: 600; color: #0D062D; vertical-align: top;">Service
-                  Verification</td>
-                <td style="padding: 18px 20px; color: #64748B; line-height: 1.5; vertical-align: top;">Difficulty
-                  maintaining reliable evidence of completed customer service.</td>
-                <td
-                  style="padding: 18px 20px; color: #0D062D; font-weight: 500; line-height: 1.5; vertical-align: top;">
-                  <span style="color: #10B981; font-weight: 700; margin-right: 6px;">✓</span>Digital customer signature
-                  capture as proof of service completion before ticket closure.
-                </td>
-              </tr>
-              <tr>
-                <td style="padding: 18px 20px; font-weight: 600; color: #0D062D; vertical-align: top;">Communication
-                  &amp; Closure</td>
-                <td style="padding: 18px 20px; color: #64748B; line-height: 1.5; vertical-align: top;">Manual
-                  coordination to communicate service progress and completion.</td>
-                <td
-                  style="padding: 18px 20px; color: #0D062D; font-weight: 500; line-height: 1.5; vertical-align: top;">
-                  <span style="color: #10B981; font-weight: 700; margin-right: 6px;">✓</span>Workflow-driven ticket
-                  closure with email and in-application stakeholder notifications.
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- 6 Connected Platform Capability Steps (Matching index.html Solution Feature Cards UI) -->
+        <div class="why-cards-container">
+          <div class="why-solution-cards-grid">
+            <!-- 01. Ticket Assignment -->
+            <div class="solution-feature-card">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px;">
+                <div class="solution-card-icon-box" style="background: rgba(99, 102, 241, 0.09);">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="#6366F1" stroke-width="1.9" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <polyline points="16 11 18 13 22 9" />
+                  </svg>
+                </div>
+                <span style="font-size: 20px; font-weight: 700; color: #6366F1; letter-spacing: -0.02em;">01</span>
+              </div>
+              <h3 style="font-size: 19px; font-weight: 600; color: #0D062D; margin-bottom: 12px; line-height: 1.3;">
+                Ticket Assignment</h3>
+              <p style="font-size: 14.5px; color: #4E4D53; line-height: 1.6; margin: 0;">Centralized ticket review and
+                support-member assignment through role-based operations.</p>
+            </div>
+
+            <!-- 02. Operational Visibility -->
+            <div class="solution-feature-card">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px;">
+                <div class="solution-card-icon-box" style="background: rgba(59, 130, 246, 0.09);">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="#3B82F6" stroke-width="1.9" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </div>
+                <span style="font-size: 20px; font-weight: 700; color: #3B82F6; letter-spacing: -0.02em;">02</span>
+              </div>
+              <h3 style="font-size: 19px; font-weight: 600; color: #0D062D; margin-bottom: 12px; line-height: 1.3;">
+                Operational Visibility</h3>
+              <p style="font-size: 14.5px; color: #4E4D53; line-height: 1.6; margin: 0;">Centralized ticket overview for
+                Managers and Service Managers.</p>
+            </div>
+
+            <!-- 03. SLA Management -->
+            <div class="solution-feature-card">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px;">
+                <div class="solution-card-icon-box" style="background: rgba(16, 185, 129, 0.09);">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="#10B981" stroke-width="1.9" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10" />
+                    <line x1="12" y1="20" x2="12" y2="4" />
+                    <line x1="6" y1="20" x2="6" y2="14" />
+                    <polyline points="4 8 10 3 16 7 20 2" />
+                  </svg>
+                </div>
+                <span style="font-size: 20px; font-weight: 700; color: #10B981; letter-spacing: -0.02em;">03</span>
+              </div>
+              <h3 style="font-size: 19px; font-weight: 600; color: #0D062D; margin-bottom: 12px; line-height: 1.3;">
+                SLA Management</h3>
+              <p style="font-size: 14.5px; color: #4E4D53; line-height: 1.6; margin: 0;">Live SLA countdown and priority
+                visibility for support users.</p>
+            </div>
+
+            <!-- 04. Location Management -->
+            <div class="solution-feature-card">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px;">
+                <div class="solution-card-icon-box" style="background: rgba(139, 92, 246, 0.09);">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="#8B5CF6" stroke-width="1.9" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <span style="font-size: 20px; font-weight: 700; color: #8B5CF6; letter-spacing: -0.02em;">04</span>
+              </div>
+              <h3 style="font-size: 19px; font-weight: 600; color: #0D062D; margin-bottom: 12px; line-height: 1.3;">
+                Location Management</h3>
+              <p style="font-size: 14.5px; color: #4E4D53; line-height: 1.6; margin: 0;">Ticket destination tracking
+                using latitude, longitude, and geoforwarding concepts.</p>
+            </div>
+
+            <!-- 05. Service Verification -->
+            <div class="solution-feature-card">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px;">
+                <div class="solution-card-icon-box" style="background: rgba(14, 165, 233, 0.09);">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="#0EA5E9" stroke-width="1.9" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <path d="M9 15l2 2 4-4" />
+                  </svg>
+                </div>
+                <span style="font-size: 20px; font-weight: 700; color: #0EA5E9; letter-spacing: -0.02em;">05</span>
+              </div>
+              <h3 style="font-size: 19px; font-weight: 600; color: #0D062D; margin-bottom: 12px; line-height: 1.3;">
+                Service Verification</h3>
+              <p style="font-size: 14.5px; color: #4E4D53; line-height: 1.6; margin: 0;">Digital customer signature
+                capture as proof of service completion before ticket closure.</p>
+            </div>
+
+            <!-- 06. Communication & Closure -->
+            <div class="solution-feature-card">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px;">
+                <div class="solution-card-icon-box" style="background: rgba(236, 72, 153, 0.09);">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="#EC4899" stroke-width="1.9" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                  </svg>
+                </div>
+                <span style="font-size: 20px; font-weight: 700; color: #EC4899; letter-spacing: -0.02em;">06</span>
+              </div>
+              <h3 style="font-size: 19px; font-weight: 600; color: #0D062D; margin-bottom: 12px; line-height: 1.3;">
+                Communication &amp; Closure</h3>
+              <p style="font-size: 14.5px; color: #4E4D53; line-height: 1.6; margin: 0;">Workflow-driven ticket closure
+                with email and in-application stakeholder notifications.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
