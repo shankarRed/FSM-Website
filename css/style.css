@@ -2544,8 +2544,18 @@ button {
   transition: opacity 0.25s ease, visibility 0.25s ease !important;
 }
 
+.fsm-input::placeholder {
+  color: #8E8E93 !important;
+  opacity: 1 !important;
+}
+
 select.fsm-input {
   cursor: pointer;
+  color: #8E8E93;
+}
+
+select.fsm-input:valid {
+  color: #0D062D !important;
 }
 
 select.fsm-input:invalid {
@@ -2554,6 +2564,10 @@ select.fsm-input:invalid {
 
 select.fsm-input option {
   color: #0D062D !important;
+}
+
+select.fsm-input option[value=""] {
+  color: #8E8E93 !important;
 }
 
 .tools-container:has(.coin-wrapper.is-active) .tools-center-image,

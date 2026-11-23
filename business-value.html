@@ -161,11 +161,38 @@
       font-family: inherit;
       font-size: 15px;
       box-sizing: border-box;
+      color: #0D062D;
+    }
+
+    .fsm-input::placeholder {
+      color: #8E8E93 !important;
+      opacity: 1 !important;
     }
 
     .fsm-input:focus {
       outline: none;
       border-color: #6049e7;
+    }
+
+    select.fsm-input {
+      cursor: pointer;
+      color: #8E8E93;
+    }
+
+    select.fsm-input:valid {
+      color: #0D062D !important;
+    }
+
+    select.fsm-input:invalid {
+      color: #8E8E93 !important;
+    }
+
+    select.fsm-input option {
+      color: #0D062D !important;
+    }
+
+    select.fsm-input option[value=""] {
+      color: #8E8E93 !important;
     }
 
     .fsm-submit-btn {
@@ -873,7 +900,7 @@
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 26px;">
           <!-- 1: Enterprise Service Providers -->
-          <div class="solution-feature-card" style="padding: 36px 30px; border-color: #6366F1;">
+          <div class="solution-feature-card" style="padding: 36px 30px;">
             <div
               style="width: 52px; height: 52px; border-radius: 14px; background: rgba(99, 102, 241, 0.09); display: flex; align-items: center; justify-content: center; color: #6366F1; margin-bottom: 22px;">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1280,7 +1307,7 @@
         <input type="text" class="fsm-input" placeholder="Full Name *" required />
         <input type="email" class="fsm-input" placeholder="Corporate Email Address *" required />
         <input type="text" class="fsm-input" placeholder="Company / Organization *" required />
-        <select class="fsm-input" required>
+        <select class="fsm-input" required onchange="this.style.color = this.value ? '#0D062D' : '#8E8E93'">
           <option value="" disabled selected hidden>Select Business Type *</option>
           <option value="Multi-Brand Service Company">Multi-Brand Service Company</option>
           <option value="Independent Service Provider">Independent Service Provider</option>

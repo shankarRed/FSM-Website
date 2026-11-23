@@ -167,6 +167,12 @@
       font-family: inherit;
       font-size: 15px;
       box-sizing: border-box;
+      color: #0D062D;
+    }
+
+    .fsm-input::placeholder {
+      color: #8E8E93 !important;
+      opacity: 1 !important;
     }
 
     .fsm-input:focus {
@@ -277,6 +283,11 @@
 
     select.fsm-input {
       cursor: pointer;
+      color: #8E8E93;
+    }
+
+    select.fsm-input:valid {
+      color: #0D062D !important;
     }
 
     select.fsm-input:invalid {
@@ -285,6 +296,10 @@
 
     select.fsm-input option {
       color: #0D062D !important;
+    }
+
+    select.fsm-input option[value=""] {
+      color: #8E8E93 !important;
     }
 
     /* Completely hide center logo when any coin tooltip is active or hovered to prevent ghosting/overlap */
@@ -1212,7 +1227,7 @@
         <input type="text" class="fsm-input" placeholder="Full Name *" required />
         <input type="email" class="fsm-input" placeholder="Corporate Email Address *" required />
         <input type="text" class="fsm-input" placeholder="Company / Organization *" required />
-        <select class="fsm-input" required>
+        <select class="fsm-input" required onchange="this.style.color = this.value ? '#0D062D' : '#8E8E93'">
           <option value="" disabled selected hidden>Select Business Type *</option>
           <option value="Multi-Brand Service Company">Multi-Brand Service Company</option>
           <option value="Independent Service Provider">Independent Service Provider</option>
